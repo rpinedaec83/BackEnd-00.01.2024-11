@@ -13,9 +13,14 @@ git merge fuentes/main main
 
 
 Fernando Ramos
-Yoshio Onuki
-Miguel Angel
-Vanesa Salcedo
-Mercedes Durand
 
+Yoshio Onuki
+
+Miguel Angel
+
+Vanesa Salcedo
+
+Junior Enriquez
+
+Mercedes Durand
 
