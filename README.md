@@ -13,8 +13,11 @@ git merge fuentes/main main
 
 
 Fernando Ramos
+
 Yoshio Onuki
+
 Miguel Angel
+
 Vanesa Salcedo
 
 Junior Enriquez
