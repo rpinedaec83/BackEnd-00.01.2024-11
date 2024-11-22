@@ -16,6 +16,8 @@ Fernando Ramos
 Yoshio Onuki
 Miguel Angel
 Vanesa Salcedo
-Mercedes Durand
 
+Junior Enriquez
+
+Mercedes Durand
 
