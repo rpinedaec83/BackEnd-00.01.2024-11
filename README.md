@@ -2,8 +2,6 @@
 Repo del grupo BackEnd 00.01.2024-11
 
 
-
-
 ## La primera vez
 git remote add fuentes https://github.com/rpinedaec83/BackEnd-00.01.2024-11.git
 
@@ -26,6 +24,3 @@ Junior Enriquez
 
 Mercedes Durand
 
-williams castillo
-
-Cristhian Osorio
