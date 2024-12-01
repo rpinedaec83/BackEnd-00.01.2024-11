@@ -1,6 +1,6 @@
 // 37. Hacer un algoritmo en Pseint para conseguir el M.C.D de un número por medio del algoritmo de Euclides.
 
-Algoritmo MCD_Euclides
+Algoritmo MCD_euclides
 	Definir a, b, residuo Como Entero
 	
 	Escribir "Ingrese el primer número: "

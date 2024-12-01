@@ -13,7 +13,7 @@
 //			Si cumple se cumple la segunda condición, calcular la suma de los 4 números.
 // ------------------------------------------------------------------------------------------------------------------------------
 
-Algoritmo OperacionesConNumeros
+Algoritmo operaciones_con_numeros
 	Definir num1, num2, num3, num4 Como Entero
 	Definir cantidadPares, mayor, cuadrado, sumaTotal Como Entero
 	Definir media Como Real

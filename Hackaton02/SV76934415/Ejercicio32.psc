@@ -1,7 +1,7 @@
 // 	32. Se quiere saber cuál es la ciudad con la población de más personas, son tres provincias y once ciudades, 
 //		hacer un algoritmo en Pseint que nos permita saber eso. 
 
-Algoritmo CiudadConMayorPoblacion
+Algoritmo ciudad_con_mayor_poblacion
 		Definir provincia, ciudad Como Cadena
 		Definir poblacion, maxPoblacionNum Como Entero
 		Definir ciudadMaxPoblacion Como Cadena

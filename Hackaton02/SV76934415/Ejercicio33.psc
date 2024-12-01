@@ -1,6 +1,6 @@
 // 33. Hacer un algoritmo en Pseint que permita al usuario continuar con el programa.
 
-Algoritmo ContinuarPrograma
+Algoritmo continuar_programa
 	Definir continuar Como Caracter
 	
 	Escribir "Bienvenido al programa."

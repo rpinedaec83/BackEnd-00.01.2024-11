@@ -1,6 +1,6 @@
 // 30. Hacer un algoritmo en Pseint para calcular la suma de los primeros cien números con un ciclo para.
 
-Algoritmo SumarPrimeros100Para
+Algoritmo sumar_primeros_100_para
 	Definir suma Como Entero
     
     suma <- 0

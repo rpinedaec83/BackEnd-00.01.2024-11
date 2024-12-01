@@ -12,7 +12,7 @@
 //		por pantalla la cantidad de dinero que el dueño le debe pagar al empleado que ingresó
 // ------------------------------------------------------------------------------------------------------------------------------
 
-Algoritmo PagoEmpleados
+Algoritmo pago_empleados
 	Definir idEmpleado, diasTrabajados, salarioDia, salarioTotal Como Entero
 	Escribir "Ingrese el número identificador del empleado (1 a 4):"
 	Leer idEmpleado

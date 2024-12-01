@@ -1,7 +1,7 @@
 // 36. Hacer un algoritmo en Pseint para calcular la serie de Fibonacci.
 
-Algoritmo SerieFibonacci
-	Definir n, i, a, b, siguiente Como Entero
+Algoritmo serie_fibonacci
+	Definir n, i, a, b, siguiente Como Real
     
     Escribir "Ingrese la cantidad de términos de la serie Fibonacci que desea calcular: "
     Leer n

@@ -1,6 +1,6 @@
 // 26. Hacer un algoritmo en Pseint para calcular el resto y cociente por medio de restas sucesivas.
 
-Algoritmo CocienteYResto
+Algoritmo cociente_y_resto
 	Definir dividendo, divisor, cociente, resto Como Entero
 	Definir continuar Como Caracter
 	

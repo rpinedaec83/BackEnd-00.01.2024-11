@@ -3,7 +3,7 @@
 //		Pi = 3 + 4/(2*3*4) - 4/(4*5*6) + 4/(6*7*8) - 4/(8*9*10) + 4/(10*11*12) - 4/(12*13*14) ...
 //		Patron: 4/n(n+1)(n+2)
 
-Algoritmo AproximacionPi
+Algoritmo aproximacion_pi
 	Definir i, term, pii, sign Como Real
 	Definir numTerminos Como Entero
 	

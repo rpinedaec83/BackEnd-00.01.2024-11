@@ -1,6 +1,6 @@
 // 16. Hacer un algoritmo en Pseint que lea un número y según ese número, indique el día que corresponde.
 
-Algoritmo DiaDeLaSemana
+Algoritmo dias_semana
 	Definir opcion, numero Como Entero
 	Repetir
 		Escribir "Seleccione una opción:"

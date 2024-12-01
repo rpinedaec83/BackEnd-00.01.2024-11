@@ -11,7 +11,7 @@
 //		Realizar un algoritmo en Pseint que dado un número de CDs a vender calcule el precio total para el cliente y la ganancia para el vendedor.
 // ------------------------------------------------------------------------------------------------------------------------------------------------
 
-Algoritmo CalcularPrecioYGanancia
+Algoritmo calcular_precio_ganancia
 	Definir cantidad, precioTotal, ganancia, PORCENTAJE Como Real
 	PORCENTAJE <- 8.25/100
 	

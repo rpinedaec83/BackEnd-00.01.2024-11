@@ -1,6 +1,6 @@
 // 29. Hacer un algoritmo en Pseint para calcular la suma de los primeros cien números con un ciclo mientras.
 
-Algoritmo SumarPrimeros100Mientras
+Algoritmo sumar_primeros_100_mientras
 	Definir suma, contador Como Entero
     
     suma <- 0

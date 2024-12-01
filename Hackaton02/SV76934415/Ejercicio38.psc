@@ -1,7 +1,7 @@
 // 	38. Hacer un algoritmo en Pseint que nos permita saber si un número es un número perfecto.
 // 		Clave: Un número perfecto es un número entero positivo que es igual a la suma de sus divisores propios
 
-Algoritmo NumeroPerfecto
+Algoritmo numero_perfecto
 	Definir n, sumaDivisores, i Como Entero
 	
 	Escribir "Ingrese un número: "
