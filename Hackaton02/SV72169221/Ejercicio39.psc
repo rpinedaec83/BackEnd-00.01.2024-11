@@ -8,7 +8,7 @@ Proceso sin_titulo
 	Fin Para
 	
 	
-	Escribir "La aproximación a pi es ",suma*4
+	Escribir "La aproximación a pi usando la formula de Leibniz es ",suma*4
 	
 	
 FinProceso
