@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Pagina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hola</h1>
+    <button onclick="alert('Hola desde el boton');">ClickMe</button>
+    <button id="btnOtro">otro boton</button>
+    <button id="btnScript">ejecutar desde el script</button>
+
+
+    <script>
+        document.getElementById("btnOtro").addEventListener("click",(e)=>{
+            e.preventDefault();
+            alert("Hola desde la pagina");
+        })
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
