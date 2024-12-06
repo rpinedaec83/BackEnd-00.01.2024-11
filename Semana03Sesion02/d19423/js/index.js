@@ -157,3 +157,13 @@ function abrirCalculadora() {
 
     } while (bandera);
 }
+
+function ejercicio01(){
+    console.log("Ejercicio 01");
+    let numero = Number.parseInt(prompt("Ingresa un numero"));
+    if(numero> 99 && numero<1000){
+        alert("Este numero tiene 3 digitos")
+    }else{
+        alert("Este numero no tiene 3 digitos")
+    }
+}
