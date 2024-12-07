@@ -1,3 +1,235 @@
 body{
-    background-color: cadetblue;
+    background-color: black;
 }
+#boton1{
+    background: transparent;
+  color: #fff;
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: 20px 30px;
+  cursor: pointer;
+  perspective: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+}
+
+#boton1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+      320deg,
+      rgba(0, 140, 255, 0.678),
+      rgba(128, 0, 128, 0.308)
+    );
+    z-index: 1;
+    transition: background 3s;
+  }
+  
+  #boton1:hover::before {
+    animation: rotate 1s;
+    transition: all 0.5s;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotateY(180deg);
+    }
+  
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+
+
+
+
+
+  #boton2 {
+    --green: #1BFD9C;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+  }
+  
+  #boton2:hover {
+    color: #82ffc9;
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+  }
+  
+  #boton2:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+  }
+  
+  #boton2:hover:before {
+    transform: translateX(15em);
+  }
+
+
+
+  #boton3 {
+    --purple: #9B7EDA;
+    font-size: 18px;
+    padding: 0.8em 3em;
+    letter-spacing: 0.08em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--purple);
+    background: linear-gradient(to right, rgba(155, 126, 218, 0.1) 1%, transparent 40%, transparent 60%, rgba(155, 126, 218, 0.1) 100%);
+    color: var(--purple);
+    box-shadow: inset 0 0 10px rgba(155, 126, 218, 0.4), 0 0 9px 3px rgba(155, 126, 218, 0.1);
+  }
+  
+  #boton3:hover {
+    color: #BFA3F3;
+    box-shadow: inset 0 0 10px rgba(155, 126, 218, 0.6), 0 0 9px 3px rgba(155, 126, 218, 0.2);
+  }
+  
+  #boton3:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(155, 126, 218, 0.1) 40%, rgba(155, 126, 218, 0.1) 60%, transparent 100%);
+  }
+  
+  #boton3:hover:before {
+    transform: translateX(15em);
+  }
+
+
+  #boton4 {
+    --green: #f25012;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(
+      to right,
+      rgba(243, 78, 22, 0.1) 1%,
+      transparent 40%,
+      transparent 60%,
+      rgba(243, 78, 22, 0.1) 100%
+    );
+    color: var(--green);
+    box-shadow:
+      inset 0 0 10px rgba(243, 78, 22, 0.4),
+      0 0 9px 3px rgba(243, 78, 22, 0.1);
+  }
+  
+  #boton4:hover {
+    color: #f25012;
+    box-shadow:
+      inset 0 0 10px rgba(243, 78, 22, 0.6),
+      0 0 9px 3px rgba(243, 78, 22, 0.2);
+  }
+  
+  #boton4:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform 0.4s ease-in-out;
+    background: linear-gradient(
+      to right,
+      transparent 1%,
+      rgba(243, 78, 22, 0.1) 40%,
+      rgba(243, 78, 22, 0.1) 60%,
+      transparent 100%
+    );
+  }
+  
+  #boton4:hover:before {
+    transform: translateX(15em);
+  }
+
+
+
+
+  #boton5 {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 1.25em;
+    cursor: pointer;
+  }
+  
+  #boton5 span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  #boton5::before {
+    content: "Ejercicio 5";
+    position: absolute;
+    inset: 1px;
+    background: #272727;
+    border-radius: 9px;
+    display: flex; /* Flexbox para centrar */
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+  }
+  
+  #boton5:hover::before {
+    opacity: -10;
+  }
+  
+  #boton5::after {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+    border-radius: 9px;
+    transition: 0.5s;
+    opacity: 0;
+    filter: blur(20px);
+  }
+  
+  #boton5:hover:after {
+    opacity: 1;
+  }
+
+

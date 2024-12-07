@@ -26,7 +26,7 @@ function Ejercicio02 (){
         alert("El número que ingreso es negativo");
     }
     else{
-        alert("El número que ingresó en mayor o igual a cero");
+        alert("El número que ingresó es mayor o igual a cero");
     }
 }
 
