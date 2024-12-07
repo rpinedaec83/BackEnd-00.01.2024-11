@@ -494,6 +494,319 @@ function Ejercicio24(){
 
 }
 
+function Ejercicio25(){
+    let factorial1=1;
+    let nNumero=0;
+    nNumero=Number.parseInt(prompt(`Digite un número entero positivo`));
+   
+    for (let i = nNumero; i >0 ; i--) {
+        factorial1=factorial1*i;     
+    }
+
+
+    
+    alert(`El factorial de ${nNumero} es ${factorial1}`)
+}
+
+function Ejercicio26(){
+    let dividendo=Number.parseInt(prompt(`Escriba el dividendo`));
+    let divisor= Number.parseInt(prompt(`Escriba el divisor`));
+
+    let cociente=0;
+    let resto=0;
+
+    let d=dividendo;
+
+    while (d>=divisor) {
+        d=d-divisor;
+        cociente=cociente+1;
+        
+    }
+    resto=d;
+
+    alert(`El cociente de ${dividendo}/${divisor} es ${cociente}
+        y el resto es ${resto}`);
+
+}
+
+
+
+function Ejercicio27(){
+    let cant=0;
+    let number=0;
+    let suma=0;
+    do {
+        number=Number.parseInt(prompt(`Digite un número (termina si ingresa un negativo)`));
+        if(number>=0){
+            cant=cant+1;
+            suma=suma+number;
+        }
+    } while (number>=0);
+
+    let prom=suma/cant;
+
+    alert(`El promedio de los números introducidos es ${prom}`);
+}
+
+
+
+function Ejercicio28(){
+    let suma=0;
+    let i=1;
+    do {
+        suma=suma+i;
+        i=i+1;
+    } while (i<=100);
+
+    alert(`La suma de los números del 1 al 100 es ${suma}`);
+}
+
+
+function Ejercicio29(){
+    let suma=0;
+    let i=1;
+    while (i<=100) {
+        suma=suma+i;
+        i=i+1
+
+
+    }
+
+    alert(`La suma de los números del 1 al 100 es ${suma}`);
+}
+
+
+function Ejercicio30(){
+    let suma=0;
+    let i=1;
+    for (let i = 1; i <=100; i++) {
+        suma=suma+i;
+    }
+
+    alert(`La suma de los números del 1 al 100 es ${suma}`);
+}
+
+
+function Ejercicio31(){
+let sumaImpares=0;
+let sumaPares=0;
+let cantPares=0;
+let canImpares=0;
+
+for (let i = 1; i <=10; i++) {
+    let number=Number.parseInt(prompt(`Ingrese un número entero positivo ${i}`));
+    if(number%2==0){
+        sumaPares=sumaPares+number;
+        cantPares=cantPares+1;
+    }
+    else{
+        sumaImpares=sumaImpares+number;
+        canImpares=canImpares+1;
+    }
+
+    
+}
+
+let promImpares=sumaImpares/canImpares;
+let promPares=sumaPares/cantPares;
+
+if (isNaN(promImpares)){
+promImpares=0;
+}
+
+if (isNaN(promPares)){
+    promPares=0;
+}
+
+alert(`La media de los numeros impares es ${promImpares}\nLa media de los numeros pares es ${promPares}`);
+
+
+
+}
+
+function Ejercicio32(){
+    let prov1=prompt(`Ingrese el nombre de la provincia`);
+    let prov2=prompt(`Ingrese el nombre de la provincia`);
+    let prov3=prompt(`Ingrese el nombre de la provincia`);
+    let cantCiudadanos=0;
+    let ciudad="";
+    let cantmax=0,ciudadma="",provinmax="";
+    for (let i = 1; i < 12; i++) {
+        let provinciaciu;
+        ciudad=prompt(`Ingrese el nombre de la ciudad numero ${i}`);
+        let opc=Number.parseInt(prompt(`Digite a que provincia pertenece la ciudad 
+            1 -> ${prov1}
+            2 -> ${prov2}
+            3 -> ${prov3}`));
+        switch(opc){
+            case 1:
+                provinciaciu=prov1;
+                break;
+            case 2:
+                provinciaciu=prov2
+                break;
+            case 3:
+                provinciaciu=prov3
+                break;
+            default:
+                provinciaciu="Error, no se seleccionó una provincia dentro de las opciones"
+                break;
+        }
+
+
+        cantCiudadanos=Number.parseInt(prompt(`Ingrese la cantidad de ciudadanos que tiene la ciudad`));
+        if(cantCiudadanos>cantmax){
+            cantmax=cantCiudadanos;
+            ciudadma=ciudad;
+            provinmax=provinciaciu;
+
+        }
+
+
+    }
+    alert(`La ciudad con mas habitantes es ${ciudadma} de la provincia ${provinmax} con ${cantmax} habitantes`);
+
+
+}
+
+
+function Ejercicio33(){
+
+    let indicacion="";
+    do {
+        indicacion=prompt(`Para continuar con el programa escriba si, sino escriba cualquier cosa`);
+    } while (indicacion==="si");
+}
+
+
+function Ejercicio34(){
+    for (let i = 1; i < 10; i++) {
+        let tabla="";
+
+        for (let j = 1; j < 13; j++) {
+            tabla=tabla+i+"*"+j+"="+i*j+"\n";
+            
+        }
+        alert(`Tabla del ${i}\n${tabla}`)
+    }
+}
+
+function Ejercicio35(){
+    let number=Number.parseInt(prompt(`Ingrese un número entero (1)`));
+
+    let menorNum=number;
+    let mayorNum=number;
+
+    for (let i = 1; i < 20; i++) {
+        let number2=parseInt(prompt(`Ingrese un número entero (${i+1})`));
+        if (number2>mayorNum) {
+            mayorNum=number2;
+        }
+        if (number2<menorNum) {
+            menorNum=number2;
+        }
+        
+    }
+
+    alert(`El mayor número es ${mayorNum}
+        y el menor es ${menorNum}`);
+
+}
+
+function Ejercicio36(){
+    let Fibonacci="";
+    let cantElementos=Number.parseInt(prompt(`Digite la cantidad de elementos de Fibonacci que desea ver`));
+
+    let f1=0;
+    let f2=1;
+
+    if(cantElementos==1){
+        Fibonacci=Fibonacci+f1;
+    }
+    else{
+        Fibonacci=Fibonacci+f1+"\n"+f2+"\n";
+    }
+
+    for (let i = 1; i <=cantElementos-2; i++) {
+        let fa=f1+f2;
+        Fibonacci=Fibonacci+fa+"\n";
+        f1=f2;
+        f2=fa;
+    }
+
+    alert(`Los elementos de Fibonacci son \n${Fibonacci}`);
+}
+
+function Ejercicio37(){
+    let num1=Number.parseInt(prompt(`Ingrese el primer numero`));
+    let num2=Number.parseInt(prompt(`Ingrese el segundo número`));
+    let inicio1=num1;
+    let inicio2=num2;
+    let cociente=0;
+    let division=0;
+    let resto=0;
+    let mcd=0;
+    if (num2>num1){
+        let x=num1;
+        num1=num2;
+        num2=x;
+    }
+    do {
+        resto=num1%num2;
+        if(resto==0){
+            mcd=num2;
+        }
+        num1=num2;
+        num2=resto;
+        
+    } while (resto!=0);
+    alert(`El MCD de los números ${inicio1} y ${inicio2} es ${mcd}`);
+}
+
+function Ejercicio38(){
+    let numero=Number.parseInt(prompt(`Introduzca un número entero positivo`));
+
+    let sumaDivisores=0;
+    for (let i = 1; i <numero; i++) {
+        if(numero%i==0){
+            sumaDivisores=sumaDivisores+i;
+        }
+    }
+
+    if(sumaDivisores==numero){
+        alert(`El número ${numero} es perfecto, la suma de sus divisores es ${sumaDivisores}`);
+    }
+    else{
+        alert(`El número ${numero} NO es perfecto, la suma de sus divisores es ${sumaDivisores}`);
+    }
+
+}
+
+function Ejercicio39(){
+    let n=Number.parseInt(prompt(`Ingrese n para aplicar la formula de Leibniz`));
+    let suma=0;
+
+    for (let i = 0; i <=n; i++) {
+        suma=suma+(((-1)**i)/((2*i)+1));   
+    }
+    suma=suma*4;
+    alert(`La aproximación a pi usando la formula de Leibniz es ${suma}`);
+}
+
+function Ejercicio40(){
+    let n=Number.parseInt(prompt(`Ingrese n para aplicar la serie de Nilakantha`));
+    let suma=0;
+    for (let i = 1; i <=n; i++) {
+        suma=suma+((4*( (-1)**(i+1))/((2*i)*((2*i)+1)*((2*i)+2))))
+    }
+    suma=suma+3;
+    alert(`La aproximación a PI usando la serie de Nilakantha es ${suma}`);
+}
+
+
+
+
+
 
 
 
