@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let horasTrabajadas = parseInt(prompt("Ingrese las horas trabajadas:"));
+        let sueldo;
+
+        if (horasTrabajadas <= 40) {
+            sueldo = horasTrabajadas * 20;
+        } else {
+            sueldo = (40 * 20) + ((horasTrabajadas - 40) * 25);
+        }
+        document.write("El sueldo semanal es: S/ " + sueldo);
+
+    </script>
+</body>
+</html>
