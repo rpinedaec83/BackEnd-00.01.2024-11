@@ -252,7 +252,7 @@ function zzz(){
     }else if(dia=== 7){
         alert("El día correspondiente es: Domingo")
     }else{
-        "Número no válido, ingrese un número entre 1 y 7."
+        alert("Número no válido, ingrese un número entre 1 y 7.");
     }
 }
 function riz(){
@@ -276,5 +276,25 @@ function riz(){
 }
 
 function pop(){
-    
+    hora = parseInt(prompt("Ingresa la hora,formato 24hr"));
+    minuto = parseInt(prompt("Ingrese los minutos"));
+    segundo = parseInt(prompt("Ingrese los segundos"));
+    let minutoSiguiente = minuto;
+    let horaSiguiente = hora;
+    let segundoSiguiente = segundo + 1;
+if(segundoSiguiente === 60){
+    segundoSiguiente = 0;
+    minutoSiguiente = minuto + 1;
+}else if(minutoSiguiente === 60){
+    minutoSiguiente = 0;
+    horaSiguiente = hora + 1;
+}else if(horaSiguiente === 24){
+    horaSiguiente = 0;
 }
+alert(
+    `La hora un segundo después es: ${horaSiguiente.toString().padStart(2, '0')}:${minutoSiguiente
+        .toString()
+        .padStart(2, '0')}:${segundoSiguiente.toString().padStart(2, '0')}`
+);
+
+}    
