@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let continuar = true;
+
+        while (continuar) {
+            let opcion = prompt("Ingrese una opción (o 'salir' para terminar):");
+            if (opcion.toLowerCase() === 'salir') {
+                continuar = false;
+                document.write("El programa ha terminado.<br>");
+            } else {
+                document.write("Opción ingresada: " + opcion + "<br>");
+            }
+        }
+    </script>
+</body>
+</html>

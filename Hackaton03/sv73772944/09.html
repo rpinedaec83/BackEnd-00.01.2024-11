@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sueldo = parseFloat(prompt("Ingres sueldo del mes"))
+        let aumento = 0.05
+        let sueldoAumentado = (sueldo*aumento) + sueldo
+        if ( sueldo < 2000){
+            aumento = 0.1
+            sueldoAumentado = (sueldo*aumento) + sueldoAumentado
+        }
+        document.write("AUmento del "+(aumento*100)+"%")
+        document.write(", Sueldo S/ "+sueldoAumentado)
+    </script>
+</body>
+</html>
