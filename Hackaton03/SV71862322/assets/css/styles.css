@@ -1,0 +1,38 @@
+
+/* Estilos para el título */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor de los botones */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilos para cada columna de botones */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #a8d5ba; /* Color pastel suave */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para el efecto hover */
+button:hover {
+    background-color: #7cbf8f; /* Color pastel más oscuro */
+}
