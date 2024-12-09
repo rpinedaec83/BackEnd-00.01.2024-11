@@ -297,4 +297,144 @@ alert(
         .padStart(2, '0')}:${segundoSiguiente.toString().padStart(2, '0')}`
 );
 
-}    
+}     
+
+function am(){
+    idem = parseInt(prompt("Ingrese el número identificador del empleado (1-Cajero, 2-Servidor, 3-Preparador de mezclas, 4-Mantenimiento):"))
+    dias = parseFloat(prompt("Ingrese la cantidad de días trabajados (máximo 6 días):"))
+    let salario;
+   
+    if(idem === 1){
+     salario= 56;
+    }else if(idem===2){
+        salario=64;
+    }else if(idem===3){
+        salario = 80;
+    }else if(idem ===4){
+        salario = 48;
+    }else{
+        alert("ID de empleado no válido.")
+    }
+        let total_apagar = salario * dias;
+        alert(`El sueldo semanal es:$${total_apagar.toFixed(2)}`);
+    
+
+}
+function mp(){
+    let primerNumero = parseInt(prompt("ingrese el primer digito positivos"));
+    let segundoNumero = parseInt(prompt("ngrese el segundo digito positivos"));
+    let tercerNumero = parseInt(prompt("ingrese el tercer digito positivos"));
+    let cuartoNumero = parseInt(prompt ("ingrese el cuarto digito positivos"));
+    let pares = 0;
+    let media = 0;
+    let suma = 0;
+    let Nmayor = primerNumero;
+    
+    if(primerNumero % 2 === 0)pares++;
+       
+    if(segundoNumero % 2 === 0)pares++;
+     
+    if(tercerNumero % 2 === 0)pares++;
+        
+    if(cuartoNumero % 2 === 0)pares++;
+       
+    Nmayor = Math.max(primerNumero, segundoNumero, tercerNumero, cuartoNumero);
+    
+    if(tercerNumero % 2 === 0){
+        alert("El cuadrado del segundo número es: " + (segundoNumero ** 2));
+    }
+    
+    if( primerNumero< cuartoNumero){
+      media = (primerNumero + segundoNumero + tercerNumero + cuartoNumero) /4;  
+      alert("La media de los cuatro números es: " + media.toFixed(2));
+    }
+
+    if(tercerNumero > 50 && tercerNumero< 700){
+            suma = primerNumero + segundoNumero + tercerNumero + cuartoNumero;
+            alert("El tercero está entre 50 y 700.");
+            alert("La suma de los cuatro números es: " + suma);
+        }
+    
+        alert("Cantidad de números pares: " + pares);
+        alert("El número mayor es: " + Nmayor);
+    
+}
+
+function mv(){
+let primerNumero = parseInt(prompt("Digite un numero entero positivo"));
+let factorial = 1;
+let contador = 1;
+if( primerNumero < 0){
+    alert("El numero debe ser positivo o cero")
+}else{
+    while(contador <= primerNumero){
+    factorial = factorial * contador;
+    contador++;
+    }
+}
+alert("El factorial de " + primerNumero + " es: " + factorial);
+
+
+}
+
+function pm(){
+    numero= parseInt(prompt("Digite el numero"));
+    let suma = numero * (numero + 1) / 2;
+    alert("La suma de los primeros: " + numero + " números es: " + suma);
+}
+
+function vp(){
+    let numero= parseInt(prompt("Digite el numero"));
+    let suma = 0;
+    for (let x = 1; x <= numero; x++){
+       if (x % 2 !==0){
+        suma += x;
+       }
+    }
+    alert("La suma de los numeros impares menores o iguales a: " + numero + "es: " + suma);
+
+}
+
+function bea(){
+   
+    let suma = 0;
+    for(let x = 2; x <= 1000; x +=2){ 
+        suma += x;
+    }
+    alert("La suma de todos los numeros pares hasta 1000 es: " + suma);
+}
+function wwe(){
+    let numero= parseInt(prompt("Digite un número para calcular su factorial:"));
+    let x = 1;
+    let factorial = 1;
+    while(x <= numero){
+        factorial = factorial * x;
+        x = x + 1;
+    }
+    alert("El factorial de " + numero + " es: " + factorial);
+
+}
+
+function arc(){
+    let primerNumero = parseInt(prompt("Digite el dividendo:"));
+    let segundoNumero = parseInt(prompt("Digite el divisor:"));
+    let cociente = 0;
+    let resto = primerNumero;
+     while(resto >= segundoNumero) {
+        resto = resto - segundoNumero;
+        cociente++;
+     }
+     alert("El cociente es: " + cociente);
+     alert("El resto es: " + resto);
+
+
+}
+
+function eng(){
+    let numero = parseInt(prompt("Digite un numero positivo:"));
+    
+
+
+
+
+}
