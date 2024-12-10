@@ -1,4 +1,5 @@
 Proceso tarea21
+  
   Definir primerNumero, factorial , contador Como Entero
   Escribir " Digite un numero entero positivo "
   Leer primerNumero
