@@ -1,14 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet"
+        id="bootstrap-css">
+
 </head>
+
 <body>
-    
+
     <button id="pedido">Empezar Pedido</button>
-    <script src="js/script.js"></script>
+    <div id="camanda">
+        <div class="container-fluid bg-gradient p-5">
+            <div class="row m-auto text-center w-90">
+
+                <div class="col-4 princing-item red">
+                    <div class="pricing-divider ">
+                        <h3 class="text-light">Comanda</h3>
+                        
+                        <svg class='pricing-divider-img' enable-background='new 0 0 300 100' height='100px' id='Layer_1'
+                            preserveAspectRatio='none' version='1.1' viewBox='0 0 300 100' width='300px' x='0px'
+                            xml:space='preserve' xmlns:xlink='http://www.w3.org/1999/xlink'
+                            xmlns='http://www.w3.org/2000/svg' y='0px'>
+                            <path class='deco-layer deco-layer--1' d='M30.913,43.944c0,0,42.911-34.464,87.51-14.191c77.31,35.14,113.304-1.952,146.638-4.729
+          c48.654-4.056,69.94,16.218,69.94,16.218v54.396H30.913V43.944z' fill='#FFFFFF' opacity='0.6'></path>
+                            <path class='deco-layer deco-layer--2' d='M-35.667,44.628c0,0,42.91-34.463,87.51-14.191c77.31,35.141,113.304-1.952,146.639-4.729
+          c48.653-4.055,69.939,16.218,69.939,16.218v54.396H-35.667V44.628z' fill='#FFFFFF' opacity='0.6'></path>
+                            <path class='deco-layer deco-layer--3' d='M43.415,98.342c0,0,48.283-68.927,109.133-68.927c65.886,0,97.983,67.914,97.983,67.914v3.716
+          H42.401L43.415,98.342z' fill='#FFFFFF' opacity='0.7'></path>
+                            <path class='deco-layer deco-layer--4' d='M-34.667,62.998c0,0,56-45.667,120.316-27.839C167.484,57.842,197,41.332,232.286,30.428
+          c53.07-16.399,104.047,36.903,104.047,36.903l1.333,36.667l-372-2.954L-34.667,62.998z' fill='#FFFFFF'></path>
+                        </svg>
+                    </div>
+                    <div class="card-body bg-white mt-0 shadow">
+                        <ul id="items" class="list-unstyled mb-5 position-relative">
+                            
+                        </ul>
+                        <button id="pagar" type="button" class="btn btn-lg btn-block  btn-custom ">Pagar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="factura">
+            <div id="invoice">
+
+                <div class="toolbar hidden-print">
+                    <div class="text-right">
+                        <button id="printInvoice" class="btn btn-info"><i class="fa fa-print"></i> Print</button>
+                        <button class="btn btn-info"><i class="fa fa-file-pdf-o"></i> Export as PDF</button>
+                    </div>
+                    <hr>
+                </div>
+                <div class="invoice overflow-auto">
+                    <div style="min-width: 600px">
+                        <header>
+                            <div class="row">
+                                <div class="col">
+                                    <a target="_blank" href="https://lobianijs.com">
+                                        <img src="img/logo.png" height="100px" data-holder-rendered="true" />
+                                    </a>
+                                </div>
+                                <div class="col company-details">
+                                    <h2 class="name">
+                                        <a target="_blank" href="https://lobianijs.com">
+                                            Arboshiki
+                                        </a>
+                                    </h2>
+                                    <div>455 Foggy Heights, AZ 85004, US</div>
+                                    <div>(123) 456-789</div>
+                                    <div>company@example.com</div>
+                                </div>
+                            </div>
+                        </header>
+                        <main>
+                            <div class="row contacts">
+                                <div class="col invoice-to">
+                                    <div class="text-gray-light">INVOICE TO:</div>
+                                    <h2 id="nombreCliente" class="to"></h2>
+                                    <div class="address">796 Silver Harbour, TX 79273, US</div>
+                                    <div class="email"><a href="mailto:john@example.com">john@example.com</a></div>
+                                </div>
+                                <div class="col invoice-details">
+                                    <h1 class="invoice-id">INVOICE 3-2-1</h1>
+                                    <div class="date">Date of Invoice: 01/10/2018</div>
+                                    <div class="date">Due Date: 30/10/2018</div>
+                                </div>
+                            </div>
+                            <table border="0" cellspacing="0" cellpadding="0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th class="text-left">DESCRIPTION</th>
+                                        <th class="text-right">HOUR PRICE</th>
+                                        <th class="text-right">HOURS</th>
+                                        <th class="text-right">TOTAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="no">04</td>
+                                        <td class="text-left">
+                                            <h3>
+                                                <a target="_blank"
+                                                    href="https://www.youtube.com/channel/UC_UMEcP_kF0z4E6KbxCpV1w">
+                                                    Youtube channel
+                                                </a>
+                                            </h3>
+                                            <a target="_blank"
+                                                href="https://www.youtube.com/channel/UC_UMEcP_kF0z4E6KbxCpV1w">
+                                                Useful videos
+                                            </a>
+                                            to improve your Javascript skills. Subscribe and stay tuned :)
+                                        </td>
+                                        <td class="unit">$0.00</td>
+                                        <td class="qty">100</td>
+                                        <td class="total">$0.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="no">01</td>
+                                        <td class="text-left">
+                                            <h3>Website Design</h3>Creating a recognizable design solution based on the
+                                            company's existing visual identity
+                                        </td>
+                                        <td class="unit">$40.00</td>
+                                        <td class="qty">30</td>
+                                        <td class="total">$1,200.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="no">02</td>
+                                        <td class="text-left">
+                                            <h3>Website Development</h3>Developing a Content Management System-based
+                                            Website
+                                        </td>
+                                        <td class="unit">$40.00</td>
+                                        <td class="qty">80</td>
+                                        <td class="total">$3,200.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="no">03</td>
+                                        <td class="text-left">
+                                            <h3>Search Engines Optimization</h3>Optimize the site for search engines
+                                            (SEO)
+                                        </td>
+                                        <td class="unit">$40.00</td>
+                                        <td class="qty">20</td>
+                                        <td class="total">$800.00</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td colspan="2">SUBTOTAL</td>
+                                        <td>$5,200.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td colspan="2">TAX 25%</td>
+                                        <td>$1,300.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"></td>
+                                        <td colspan="2">GRAND TOTAL</td>
+                                        <td>$6,500.00</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <div class="thanks">Thank you!</div>
+                            <div class="notices">
+                                <div>NOTICE:</div>
+                                <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30
+                                    days.</div>
+                            </div>
+                        </main>
+                        <footer>
+                            Invoice was created on a computer and is valid without the signature and seal.
+                        </footer>
+                    </div>
+                    <!--DO NOT DELETE THIS div. IT is responsible for showing footer always at the bottom-->
+                    <div></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+        <script src="js/script.js"></script>
 </body>
+
 </html>
