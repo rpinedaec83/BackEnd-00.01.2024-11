@@ -1,5 +1,6 @@
 Proceso tarea26
-	Definir nume1, nume2, cociente, resto Como Entero
+	
+    Definir nume1, nume2, cociente, resto Como Entero
     Escribir " Digite el dividendo "
     Leer nume1
     Escribir " Digite el divisor "

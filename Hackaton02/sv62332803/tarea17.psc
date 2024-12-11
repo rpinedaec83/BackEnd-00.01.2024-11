@@ -3,7 +3,6 @@ Proceso tarea17
 	Definir hora, minuto, segundo, horaSiguiente, minutoSiguiente, segundoSiguiente Como Entero
 	
     Escribir "Ingrese la hora (formato 24 horas):"
-    Leer hora
     Escribir "Ingrese los minutos:"
     Leer minuto
     Escribir "Ingrese los segundos:"
