@@ -93,11 +93,7 @@ let objBarista={
         let pedido = objCliente.pedido;
         let strHtml = "";
         Object.keys(pedido).forEach(key => {
-            console.log(key, pedido[key]);
-            let stritem = objOpciones[key];
             let strValor = objOpciones[key][pedido[key]];
-            console.log(stritem)
-            console.log(strValor)
             strHtml += `<li><b>${key}</b> ---> ${strValor}</li>`;
           });
           $("#items").html(strHtml);
