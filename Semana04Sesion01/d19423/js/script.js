@@ -43,13 +43,14 @@ let objCajero={
         let tipoProducto= pedirDatos("Dime tu tipo de producto",objOpciones.tipoProducto);
         console.log(tipoProducto)
        
-        if(tipoProducto==1){
+        if(tipoProducto==0){
             let tipoCafe = pedirDatos("Dime tu Tipo de Cafe", objOpciones.tipoCafe);
             console.log(tipoProducto)
         }else{
-
+           
         }
-        console.log("Recibiendo Pedido")
+        
+        console.log("Recibiendo Pedido");
     }
 }
 
