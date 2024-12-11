@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let h = parseInt(prompt("Ingrese la hora (0-23):"));
+        let m = parseInt(prompt("Ingrese los minutos (0-59):"));
+        let s = parseInt(prompt("Ingrese los segundos (0-59):"));
+
+        if (h > 23 || m > 59 || s > 59) {
+            alert("Datos invalidos")
+        }else {
+            segundos++;
+            if (segundos === 60) {
+            segundos = 0;
+            minutos++;
+            }
+            if (minutos === 60) {
+                minutos = 0;
+                horas++;
+            }
+            if (horas === 24) {
+                horas = 0;
+            }
+        }
+
+
+        document.write("La hora dentro de un segundo será: "+horas+":"+minutos+":"+segundos+" hrs");
+
+    </script>
+</body>
+</html>

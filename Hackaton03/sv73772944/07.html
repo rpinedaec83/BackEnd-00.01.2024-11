@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let membresia = prompt("Ingrese el tipo de membresia");
+        let precio    = prompt("Ingrese total de compra");
+        let descuento = 0;
+        if (membresia.toUpperCase() === 'A') {
+            descuento = 0.1;
+        } else if (membresia.toUpperCase() === 'B') {
+            descuento = 0.15;
+        } else if (membresia.toUpperCase() === 'C') {
+            descuento = 0.2;
+        }
+        let precioFinal = precio - (descuento*precio)
+        document.write("Tu descuento es "+(descuento*100)+"%<br>");
+        document.write("Precio final: S/ "+precioFinal)
+    </script>
+</body>
+</html>

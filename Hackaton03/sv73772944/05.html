@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cantidadZapatos = parseInt(prompt("Ingrese el nuemro de zapatos"));
+        let precioUnitario  = 80;
+        let descuento       = 0;
+
+        if (cantidadZapatos > 30) {
+            descuento = 0.40;
+        } else if (cantidadZapatos < 20) {
+            descuento = 0.20;
+        } else if (cantidadZapatos > 10) {
+            descuento = 0.10;
+        }
+        let total = cantidadZapatos * precioUnitario;
+        let totalDescuento = total - (total*descuento);
+
+        document.write("El total a pagar es S/: ", totalDescuento);
+    </script>
+</body>
+</html>

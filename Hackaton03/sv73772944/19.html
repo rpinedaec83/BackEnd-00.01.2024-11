@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let idEmpleado = parseInt(prompt("Ingrese el número identificador del empleado\n1: Cajero\n2: Servidor\n3: Preparador de mezclas\n4: Mantenimiento:"));
+        let diasTrabajados = parseInt(prompt("Ingrese la cantidad de días trabajados (máximo 6):"));
+        let salarioDiario;
+        switch (idEmpleado) {
+            case 1:
+                salarioDiario = 56;
+                break;
+            case 2:
+                salarioDiario = 64;
+                break;
+            case 3:
+                salarioDiario = 80;
+                break;
+            case 4:
+                salarioDiario = 48;
+                break;
+            default:
+                console.log("Identificador de empleado no válido.");
+                salarioDiario = 0;
+        }
+
+        let salarioTotal = salarioDiario * diasTrabajados;
+        document.write("El salario total a pagar es: S/ " + salarioTotal);
+    </script>
+</body>
+</html>

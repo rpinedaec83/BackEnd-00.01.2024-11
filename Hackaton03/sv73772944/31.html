@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numeros = [];
+        for (let i = 0; i < 10; i++) {
+            numeros.push(parseInt(prompt("Ingrese un número: "+(i+1))));
+        }
+
+        let sumaPares = 0, sumaImpares = 0;
+        let cuentaPares = 0, cuentaImpares = 0;
+
+        numeros.forEach(num => {
+            if (num % 2 === 0) {
+                sumaPares += num;
+                cuentaPares++;
+            } else {
+                sumaImpares += num;
+                cuentaImpares++;
+            }
+        });
+
+        let mediaPares = cuentaPares > 0 ? sumaPares / cuentaPares : 0;
+        let mediaImpares = cuentaImpares > 0 ? sumaImpares / cuentaImpares : 0;
+
+        document.write("La media de los números pares es: " + mediaPares + "<br>");
+        document.write("La media de los números impares es: " + mediaImpares + "<br>");
+
+    </script>
+</body>
+</html>
