@@ -1,5 +1,5 @@
 Proceso SueldoTrabajador
-	Escribir "Ingrese el número de horas trabajadas: "
+	Escribir "Ingrese el nï¿½mero de horas trabajadas: "
     Leer horasTrabajadas
 	
     Si horasTrabajadas <= 40 Entonces
