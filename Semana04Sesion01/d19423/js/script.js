@@ -48,13 +48,40 @@ let objCajero={
         let tipoProducto= pedirDatos("Dime tu tipo de producto",objOpciones.tipoProducto);
         console.log(tipoProducto)
        
-        if(tipoProducto==1){
-            let tipoCafe = pedirDatos("Dime tu Tipo de Cafe", objOpciones.tipoCafe);
-            console.log(tipoProducto)
+        if(tipoProducto==0){
+             tipoCafe = pedirDatos("Dime tu Tipo de Cafe", objOpciones.tipoCafe);
+             tipoGranos = pedirDatos("Con que grano de cafe quieres tu bebida", objOpciones.tipoGranos);
+            console.log(tipoCafe);
+             leche = pedirDatos("Quieres leche con tu cafe??",objOpciones.leche)
+            if(leche==0){
+                 tipoLeche = pedirDatos("Que tipo de leche deseas", objOpciones.tipoLeche)
+            }
+             azucar = pedirDatos("Quiere4s azucar con tu cafe??", objOpciones.azucar);
+            if(azucar==0){
+                 tipoAzucar = pedirDatos("Que tipo de azucar quieres??", objOpciones.tipoAzucar);
+            }
+            objCliente.nombre = nombre;
+            objPedido = {
+                tipoProducto,
+                tipoCafe,
+                tipoGranos,
+                leche,
+                tipoLeche,
+                azucar,
+                tipoAzucar
+            }
         }else{
-           
+
         }
+        objCliente.pedido = objPedido;
+        console.log(objCliente);
         console.log("Recibiendo Pedido")
+        if(objBarista.prepararPedido(objCliente)){
+            objCliente.pagar(15);
+            //document.getElementById("factura").style.display= "block";
+            $("#nombreCliente").text(objCliente.nombre);
+            $("#factura").show();
+        }
     }
 }
 
