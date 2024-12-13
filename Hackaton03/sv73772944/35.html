@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numeros = [];
+        for (let i = 0; i < 20; i++) {
+            numeros.push(parseInt(prompt("Ingrese un número:")));
+        }
+
+        let mayor = Math.max(...numeros);
+        let menor = Math.min(...numeros);
+
+        document.write("El número mayor es: " + mayor + "<br>");
+        document.write("El número menor es: " + menor + "<br>");
+
+    </script>
+</body>
+</html>

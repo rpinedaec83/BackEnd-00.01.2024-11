@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ciudades = [
+            { provincia: 'Provincia1', ciudad: 'Ciudad1', poblacion: 100000 },
+            { provincia: 'Provincia1', ciudad: 'Ciudad2', poblacion: 150000 },
+            { provincia: 'Provincia2', ciudad: 'Ciudad3', poblacion: 200000 },
+            { provincia: 'Provincia2', ciudad: 'Ciudad4', poblacion: 250000 },
+            { provincia: 'Provincia2', ciudad: 'Ciudad5', poblacion: 180000 },
+            { provincia: 'Provincia3', ciudad: 'Ciudad6', poblacion: 300000 },
+            { provincia: 'Provincia3', ciudad: 'Ciudad7', poblacion: 350000 },
+            { provincia: 'Provincia3', ciudad: 'Ciudad8', poblacion: 320000 },
+            { provincia: 'Provincia3', ciudad: 'Ciudad9', poblacion: 330000 },
+            { provincia: 'Provincia3', ciudad: 'Ciudad10', poblacion: 340000 },
+            { provincia: 'Provincia3', ciudad: 'Ciudad11', poblacion: 360000 }
+        ];
+
+        let ciudadMayor = ciudades.reduce((max, ciudad) => (ciudad.poblacion > max.poblacion ? ciudad : max));
+
+        document.write("La ciudad con mayor población es: " + ciudadMayor.ciudad + " con " + ciudadMayor.poblacion + " habitantes.<br>");
+
+    </script>
+</body>
+</html>

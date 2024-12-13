@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let accion = prompt("1. Centimetro a pulgada\n2.Libras a kilogramos\nIngrese una opcion");
+        if (accion === '1') {
+            let centimetro = parseFloat(prompt("Ingrese centimetros"));
+            let pulgada = 0.393701;
+            document.write(centimetro+"cm");
+            document.write(" en pulgadas es ");
+            document.write((centimetro*pulgada).toFixed(2)+" pulgadas");
+        } else if (accion === '2') {
+            let libras = parseFloat(prompt("Ingrese libras"));
+            let kilogramo = 0.453592;
+            document.write(libras+" libras");
+            document.write(" en kilogramos es ");
+            document.write((libras*kilogramo).toFixed(2)+"kg");
+        } else {
+            alert("Opcion incorrecta");
+        }
+    </script>
+</body>
+</html>
