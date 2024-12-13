@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackaton 03</title>
+  <link rel="stylesheet" href="/Hackaton03/SV76934415/assets/css/style.css">
+  <!-- Tailwind-->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="min-h-screen flex flex-col items-center justify-center">
+      <!-- Titulo -->
+      <h1 class="text-4xl font-bold text-gray-800 mb-10">
+        Hackaton 03
+      </h1>
+
+      <h2 class="text-2xl font-semibold text-gray-800 mb-10">
+        Alumno: <span class="text-blue-700">Aurelio Yoshio Onuki Navas</span>
+      </h2>
+      <!-- Instructiones -->
+      <p class="text-lg text-gray-800 mb-10">
+        Seleccione un ejercicio para ejecutar su código.
+      </p>
+      <!-- Contenedor de botones -->
+      <div class="grid grid-cols-4 gap-4 max-w-2xl" id="buttons-container"></div>
+    </div>
+  
+    <script src="/Hackaton03/SV76934415/assets/js/script.js"></script>
+    <script>
+      // Generar botones dinámicamente
+      const buttonContainer = document.getElementById("buttons-container");
+  
+      for (let i = 1; i <= 40; i++) {
+        const button = document.createElement("button");
+        button.innerText = `Ejercicio ${String(i).padStart(2, '0')}`;
+        button.className = "bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded shadow-md transition-all";
+  
+        // Asignar el onclick dinámicamente
+        button.onclick = window[`ejercicio${String(i).padStart(2, '0')}`] || (() => alert(`Ejercicio ${String(i).padStart(2, '0')} no implementado`));
+  
+        // Añadir el botón al contenedor
+        buttonContainer.appendChild(button);
+      }
+    </script>
+</body>
+</html>
