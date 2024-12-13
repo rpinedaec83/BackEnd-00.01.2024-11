@@ -1,5 +1,6 @@
 Proceso tarea27
-	Definir nume, suma, contador Como Entero
+	
+    Definir nume, suma, contador Como Entero
     suma <- 0
     contador <- 0
     Escribir " Digite un numero positivo "
