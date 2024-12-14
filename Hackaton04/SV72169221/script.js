@@ -220,6 +220,155 @@ console.log(objectToArray(objMedia));
 
 
 
+function squaresSum(n){
+    let sumaCuadrados=0;
+    for (let i = 1; i <=n; i++) {
+        sumaCuadrados+=(i**2);
+        
+    }
+    return sumaCuadrados;
+}
+
+
+//Ejercicio 15
+let matrizLength=[85,2,42,63];
+function multiplyByLength(matriz){
+    for (let i = 0; i < matriz.length; i++) {
+       matriz[i]=matriz[i]*matriz.length;
+    }
+    return matriz;
+}
+console.log(`Ejercicio 15`);
+console.log(matrizLength);
+console.log(multiplyByLength(matrizLength));
+
+
+//Ejercicio 16
+let n=7;
+function countdown(n){
+    let matrizConteoRegresivo=[];
+    for (let i = n; i >=0; i--) {
+        matrizConteoRegresivo.push(i);
+        
+    }
+    return matrizConteoRegresivo;
+}
+console.log(`Ejercicio 16`);
+console.log(countdown(7));
+
+//Ejercicio 17
+
+let matrizMaxminusMin=[85,68,25,84,2,9,-15,74];
+function diffMaxMin(matrix){
+    let min=Math.min.apply(null,matrix);
+    let max=Math.max.apply(null,matrix);
+
+    return max-min;
+}
+console.log(`Ejercicio 17`)
+console.log(matrizMaxminusMin);
+console.log(diffMaxMin(matrizMaxminusMin));
+
+//Ejercicio 18
+let matrizStringIntegers=["s",88,"cadena",41,22,"m","y",6];
+function filterList(matriz){
+    let matrizIntegers=[];
+    matriz.forEach(valor=>{
+        if (Number.isInteger(valor))
+            matrizIntegers.push(valor);
+    })
+    return matrizIntegers;
+
+
+}
+console.log(`Ejercicio 18`);
+console.log(matrizStringIntegers);
+console.log(filterList(matrizStringIntegers));
+
+
+
+//Ejercicio 19
+function repeat(elemento,tiempo){{
+    let matrizEleTiemp=[];
+    for (let i = 1; i <=tiempo; i++) {
+        matrizEleTiemp.push(elemento);
+        
+    }
+    return matrizEleTiemp;
+}};
+console.log(`Ejercicio 19`)
+console.log(repeat(144,5));
+
+
+//Ejercicio 20
+let objString={
+    string:"",
+    vreplace:function(vowel){
+        const matrizVowels=["a","e","i","o","u","A","E","I","O","U"];
+        let stringdeObj=this.string;
+        let newstr="";
+        for (let i = 0; i < stringdeObj.length; i++) {
+            if (matrizVowels.includes(stringdeObj[i])) {
+                newstr+=vowel;
+                
+            }
+            else{
+                newstr+=stringdeObj[i];
+            }
+        }
+        return newstr;
+        
+    }
+}
+
+
+
+console.log("Ejercicio 20");
+let string1="Banana Manzana Platano Fresa";
+objString.string=string1;
+console.log(string1);
+let newstr=objString.vreplace("u");
+console.log(newstr);
+
+//Ejercicio 20 segunda manera
+String.prototype.vreplace = function (char) {
+    const vowels = "aeiouAEIOU";
+    return this.split("").map(letter => (vowels.includes(letter) ? char : letter)).join("");
+  };
+  console.log("banana platano guanabana papaya")
+  console.log("banana platano guanabana papaya".vreplace("u"))
+
+
+//Ejercicio 21
+function findNemo(string){
+    let arrPalabras=string.split(" ");
+    let indice=0;
+    for (let i = 0; i < arrPalabras.length; i++) {
+        if (arrPalabras[i]=="Nemo") {
+            indice=i+1;
+        }
+        
+    }
+    return `I found Nemo at ${indice}`;
+}
+console.log(`Ejercicio 21`);
+console.log(`Donde esta el pez Nemo`);
+console.log(findNemo(`Donde esta el pez Nemo`))
+
+//Ejercicio 22
+function capLast(word){
+    let arrCaracteres=word.split("");
+    arrCaracteres[arrCaracteres.length-1]=arrCaracteres[arrCaracteres.length-1].toUpperCase();
+    let newstr=arrCaracteres.join("")
+    return newstr;
+}
+console.log("Ejercicio 22");
+console.log("Cancer");
+console.log(capLast("Cancer"));
+
+
+
+
 
 $("#suma").on("click",async(e)=>{
     e.preventDefault();
@@ -323,6 +472,19 @@ $("#sumarest").on("click",async (e)=>{
     }
     let suma=sumarest(...numeros)
     alert(`La suma de todos los números introducidos es ${suma}`);
+
+
+})
+
+//Ejercicio 14
+$("#sumasquare").on("click",async (e)=>{
+    e.preventDefault();
+    let n=0;
+    do {
+        n=Number.parseInt(prompt(`Ingrese un valor n mayor o igual a 1`));
+    } while (n<1 || isNaN(n));
+    let sumacuadrado=squaresSum(n);
+    alert(`La suma de cuadrados del 1 al ${n} es ${sumacuadrado}`);
 
 
 })
