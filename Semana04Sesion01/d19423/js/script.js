@@ -184,3 +184,24 @@ function pedirDatos(speech, opciones){
 
     return respuesta;
 }
+
+let strFecha = "2024-12-12";
+let año =  strFecha.substring(0,4);
+console.log(año)
+let mes = strFecha.substring(5,7)
+console.log(mes)
+let dia = strFecha.substring(8,10)
+console.log(dia)
+
+let dato = ".com";
+console.log(dato.padStart(20,"0"))
+console.log(dato.padEnd(20,"_"))
+
+let strInfo = "uno,dos,tres,cuatro,cinco";
+let arrListaNumeros = strInfo.split(',');
+console.log(arrListaNumeros)
+
+strInfo = "Hola desde la consola";
+let arrTodasLasLetras = strInfo.split("");
+console.log(arrTodasLasLetras)
+console.log(Math.E)
