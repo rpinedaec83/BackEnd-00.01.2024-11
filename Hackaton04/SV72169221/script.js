@@ -59,7 +59,7 @@ tipoDeValor(function(){});
 tipoDeValor(undefined);
 tipoDeValor(true);
 
-
+//4
 function sumarest(...numeros){
     return numeros.reduce((suma, numero) => suma + numero, 0);
 }
@@ -77,7 +77,7 @@ function filtroDeStrings(arr){
 
 let arrayRandom=["Hola",false,21,{},"Chau",true,45,"JavaScript"];
 console.log(filtroDeStrings(arrayRandom));
-
+//6
 let arrayRamdom=[41,52,36,20,100,47,12]
 function minMax(arr){
     min=Math.min.apply(null,arr);
@@ -90,7 +90,7 @@ console.log(`Ejercicio 6`)
 console.log(minMax(arrayRamdom));
 
 
-
+//7
 arrayEnteros=[0,1,2,3,4,5,6,7,8,9]
 
 function formatPhoneNumber(array){
@@ -111,7 +111,7 @@ console.log(`Cada vez que se actualiza la página imprime un número telefónico
 console.log(formatPhoneNumber(arrayEnteros));
 
 
-
+//8
 matrizNumeros=[[3,4,12],[432,89,54],[45,70,3]];
 
 function findLargestNums(arrayArg){
@@ -130,7 +130,7 @@ console.log(`Ejercicio 8`)
 console.log(findLargestNums(matrizNumeros));
 
 
-
+//9
 function charIndex(palabra,caracter){
     let index=[];
     for (let i = 0; i < palabra.length; i++) {
@@ -146,7 +146,7 @@ console.log("Aeropuerto");
 console.log(`El caracter "e" aparece en los índices `,charIndex("Aeropuerto","e"));
 
 
-
+//10
 function toArray(object){
     objetoArray=Object.keys(object);
     arrayObject=[];
@@ -165,7 +165,7 @@ console.log(`Ejercicio 10`)
 console.log(toArray(objeto1));
 
 
-
+//11
 arrObjsPresupuestos=[{name:"Pedrito",age:21,budget:14000},{name:"Sara",age:70,budget:5000},{name:"Carlos",age:25,budget:60000}];
 function getBudgets(arrObjs){
     let sumBudget=0;
@@ -185,7 +185,7 @@ console.log(`Ejercicio 11`);
 console.log(getBudgets(arrObjsPresupuestos));
 
 
-
+//12
 let arrObjStudents=[{name:"Steve"},{name:"Alex"},{name:"Jimmy"}];
 
 function getStudentsNames(arrObjs){
@@ -200,7 +200,7 @@ function getStudentsNames(arrObjs){
 console.log(`Ejercicio 12`);
 console.log(getStudentsNames(arrObjStudents));
 
-
+//13
 let objMedia={likes:2,dislikes:6,followers:21}
 function objectToArray(objeto){
     let arrKeysValues=[]
@@ -213,13 +213,19 @@ function objectToArray(objeto){
     return arrKeysValues;
 
 }
+
+function objectToArray2(object){
+    array=Object.entries(object)
+    return array;
+}
 console.log(`Ejercicio 13`);
 console.log(objectToArray(objMedia));
+console.log(objectToArray2(objMedia))
 
 
 
 
-
+//14 Con boton
 function squaresSum(n){
     let sumaCuadrados=0;
     for (let i = 1; i <=n; i++) {
