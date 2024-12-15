@@ -139,7 +139,7 @@ formatPhoneNumber(numberPhone);
 // 8 
 
 function findLargestNums(array) {
- return array.map(funciton (arr) => Math.max(...arr));
+// return array.map(funciton (arr) => Math.max(...arr));
 }
 
 findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]])
@@ -185,9 +185,13 @@ getstudents(students)
 
 // 14
 
-const squaresSum = n => array.from({length: n},(_,i) 
-=> (i + 1) ** 2).reduce((a,b) => a + b, 0)
-squaresSum(3);
+const tamano = 10
+const empieza = 10
+console.log(Array.from({length: tamano}, (_, i) => (i + empieza)))
+
+const squaresSum = n => Array.from({length: n}, (_, i) => (i + 1) ** 2).reduce((a,b) => a + b, 0)
+
+squaresSum(3)
 
 // 15
 
