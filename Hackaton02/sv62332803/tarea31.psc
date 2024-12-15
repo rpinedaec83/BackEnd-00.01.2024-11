@@ -1,12 +1,13 @@
 Proceso tarea31
-	Definir Nume, SumaP, SumaI, ContadorP, ContadorI Como Entero
+	
+    Definir Nume, SumaP, SumaI, ContadorP, ContadorI Como Entero
     SumaP <- 0
     SumaI <- 0
     ContadorP <- 0
     ContadorI <- 0
 	
     Para X <- 1 Hasta 10 Con Paso 1 Hacer
-        Escribir "Ingrese el número ", X, ":"
+        Escribir "Ingrese el nï¿½mero ", X, ":"
         Leer Nume
 		
         Si Nume MOD 2 = 0 Entonces
@@ -20,16 +21,16 @@ Proceso tarea31
 	
     Si ContadorP > 0 Entonces
         MediaP <- SumaP / ContadorP
-        Escribir "La media de los números pares es: ", MediaP
+        Escribir "La media de los nï¿½meros pares es: ", MediaP
     Sino
-        Escribir "No se ingresaron números pares."
+        Escribir "No se ingresaron nï¿½meros pares."
     Fin Si
 	
     Si ContadorI > 0 Entonces
         MediaI <- SumaI / ContadorI
-        Escribir "La media de los números impares es: ", MediaI
+        Escribir "La media de los nï¿½meros impares es: ", MediaI
     Sino
-        Escribir "No se ingresaron números impares."
+        Escribir "No se ingresaron nï¿½meros impares."
     Fin Si
 	
 	

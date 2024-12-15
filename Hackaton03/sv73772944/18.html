@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cantidadCDs = parseInt(prompt("Ingrese la cantidad de CDs:"));
+        let precioUnitario;
+        if (cantidadCDs <= 9) {
+            precioUnitario = 10;
+        } else if (cantidadCDs <= 99) {
+            precioUnitario = 8;
+        } else if (cantidadCDs <= 499) {
+            precioUnitario = 7;
+        } else {
+            precioUnitario = 6;
+        }
+
+        let totalVenta = cantidadCDs * precioUnitario;
+        let ganancia = totalVenta * 0.0825;
+
+        document.write("El precio total para el cliente es: $" + totalVenta);
+        document.write("<br>")
+        document.write("La ganancia para el vendedor es: $" + ganancia);
+
+    </script>
+</body>
+</html>l

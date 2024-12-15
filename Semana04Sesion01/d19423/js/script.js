@@ -76,11 +76,13 @@ let objCajero={
         objCliente.pedido = objPedido;
         console.log(objCliente);
         console.log("Recibiendo Pedido")
+        $("#comanda").show();
         if(objBarista.prepararPedido(objCliente)){
             objCliente.pagar(15);
             //document.getElementById("factura").style.display= "block";
             $("#nombreCliente").text(objCliente.nombre);
-            $("#factura").show();
+            //$("#factura").show();
+            
         }
     }
 }
@@ -104,6 +106,7 @@ let objBarista={
                             <li><b>Help center access</b></li> */  
         console.log("Preparando el pedido")
         console.log("Pedido Listo")
+
         return true;
     }
 }
@@ -113,7 +116,44 @@ document.getElementById("pedido").addEventListener("click",(e)=>{
     // objCliente.hacerPedido();
     objCajero.recibirPedido();
     // objBarista.prepararPedido();
+});
+$("#pagar").on("click",async (e)=>{
+    e.preventDefault();
+    const inputValue =""
+    const { value: ipAddress } = await Swal.fire({
+        title: "Ingresa el valor a cobrar",
+        input: "text",
+        inputLabel: "Valor recibido",
+        inputValue,
+        showCancelButton: true,
+        inputValidator: (value) => {
+          if (!value) {
+            return "You need to write something!";
+
+          }else{
+            console.log(value)
+            $("#comanda").hide();
+            dibujarFactura(value);
+          }
+        }
+      });
 })
+
+function dibujarFactura(valor){
+    console.log("Tengo que hacer una factura por: "+valor)
+    let pedido = objCliente.pedido;
+        let strHtml = "<ul>";
+        Object.keys(pedido).forEach(key => {
+            let strValor = objOpciones[key][pedido[key]];
+            strHtml += `<li><b>${key}</b> ---> ${strValor}</li>`;
+          });
+    $("#detalleFactura").html(strHtml+"</ul>");
+    $("#totalDetalle").text(valor);
+    $("#subtotal").text(valor);
+    $("#igb").text((valor*0.18).toFixed(2));
+    $("#total").text((valor*1.18).toFixed(2));
+    $("#factura").show();
+}
 
 let objOpciones = {
     nombre: "",
@@ -144,3 +184,24 @@ function pedirDatos(speech, opciones){
 
     return respuesta;
 }
+
+let strFecha = "2024-12-12";
+let año =  strFecha.substring(0,4);
+console.log(año)
+let mes = strFecha.substring(5,7)
+console.log(mes)
+let dia = strFecha.substring(8,10)
+console.log(dia)
+
+let dato = ".com";
+console.log(dato.padStart(20,"0"))
+console.log(dato.padEnd(20,"_"))
+
+let strInfo = "uno,dos,tres,cuatro,cinco";
+let arrListaNumeros = strInfo.split(',');
+console.log(arrListaNumeros)
+
+strInfo = "Hola desde la consola";
+let arrTodasLasLetras = strInfo.split("");
+console.log(arrTodasLasLetras)
+console.log(Math.E)

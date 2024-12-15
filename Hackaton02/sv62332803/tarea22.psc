@@ -1,4 +1,5 @@
 Proceso tarea22
+	
 	Escribir " Digite un numero "
 	Leer primerNumero
 	suma = 0
