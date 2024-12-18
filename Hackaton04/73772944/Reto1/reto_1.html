@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        button {
+            margin: 5px 0;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input, select {
+            margin: 5px 0;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicios de JavaScript y HTTP</h1>
+
+    <button onclick="showSum(5, 7)">EJ. (1)<br>Sumar 5 + 7</button>
+    <button onclick="showPower(2, 3)">EJ. (2)<br>Potencia 2^3</button>
+    <button onclick="showSumOfCubes(1, 5, 9)">EJ. (3)<br>Suma de Cubos (1, 5, 9)</button>
+    <button onclick="showTriArea(3, 2)">EJ. (4)<br>Área de un triángulo (base: 3, altura: 2)</button>
+
+    <h2>EJ. (5)<br>Calculadora</h2>
+    <form onsubmit="event.preventDefault(); handleCalculator();">
+        <input id="num1" type="number" placeholder="Número 1" required>
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">x</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input id="num2" type="number" placeholder="Número 2" required>
+        <button type="submit">Calcular</button>
+    </form>
+
+    <div id="results">
+        <h2>Resultados:</h2>
+        <p id="output">Presiona un botón para ver el resultado.</p>
+    </div>
+
+    <script src="Reto_1.js"></script>
+</body>
+</html>

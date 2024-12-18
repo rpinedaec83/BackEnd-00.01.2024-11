@@ -1,5 +1,6 @@
 Proceso tarea23
-    Escribir "Digite un número"
+    
+    Escribir "Digite un nï¿½mero"
     Leer nume
 	
     suma <- 0
@@ -7,7 +8,7 @@ Proceso tarea23
         suma <- suma + x
     Fin Para
 	
-    Escribir "La suma de los números impares menores o iguales a ", nume, " es: ", suma
+    Escribir "La suma de los nï¿½meros impares menores o iguales a ", nume, " es: ", suma
 	
 FinProceso
 

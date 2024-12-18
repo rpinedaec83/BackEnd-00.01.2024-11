@@ -1,5 +1,6 @@
 Proceso tarea29
-	Definir nume, x Como Entero
+	
+    Definir nume, x Como Entero
     nume <- 0
     x <- 1
 	
@@ -8,5 +9,6 @@ Proceso tarea29
         x <- x + 1
     Fin Mientras
 	
-    Escribir "La suma de los primeros 100 números es: ", nume
+    
+   Escribir "La suma de los primeros 100 nï¿½meros es: ", nume
 FinProceso
