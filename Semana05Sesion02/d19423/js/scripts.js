@@ -24,7 +24,7 @@ const Reserva = function () //a
             showCloseButton:true,
             showCancelButton:true,
             confirmButtonText: "Guardar",
-            denyButtonText: "Cancelar",
+            cancelButtonText: "Cancelar",
             html: `<!-- Text input-->
 <div class="form-group">
   <div >
@@ -68,18 +68,34 @@ const Reserva = function () //a
 
         if(formValues){
             let objReserva = new Reservas(formValues.origen,formValues.destino, formValues.fechaIda, formValues.fechaVuelta)
+            console.log("inicio de incluir Pasajeros")
             incluirPasajeros().then(data=>{
+                console.log("Recien llego la data")
                 objReserva.asignarAvionIda (new Aviones("JA 7722","AirBus 320 Neo", 192,96,200));
                 objReserva.asignarAvionVuelta( new Aviones("JA 7723","AirBus 318 Neo",192,96,300));
                 objReserva.avionIda.agregarPasajeros(data);
                 objReserva.avionVuelta.agregarPasajeros(data);
                 dibujarReserva(objReserva);
-            })
+            });
+            console.log("Fin de incluir Pasajeros")
         }
     }
 
 function dibujarReserva(objReserva){
     console.log(objReserva);
+    $("#idaNombre").val(objReserva.avionIda.arrPasajeros[0].nombres);
+    $("#idaApellido").val(objReserva.avionIda.arrPasajeros[0].apellidos);
+    $("#idaFecha").val(objReserva.fechaIda);
+    $("#idaVuelo").val(objReserva.avionIda.matricula);
+    $("#idaOrigen").val(objReserva.origen);
+
+    $("#retNombre").val(objReserva.avionVuelta.arrPasajeros[0].nombres);
+    $("#retApellido").val(objReserva.avionVuelta.arrPasajeros[0].apellidos);
+    $("#retFecha").val(objReserva.fechaVuelta);
+    $("#retVuelo").val(objReserva.avionVuelta.matricula);
+    $("#retDestino").val(objReserva.destino);
+
+    $("#divReserva").show();
 }
 
     async function incluirPasajeros() {
