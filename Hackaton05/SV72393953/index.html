@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reparaciones de celulares</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h2>
+                        Sistema de Reparaciones de celulares
+                    </h2>
+                    <h3 id="empresa"></h3>
+                    <h3 id="ciudad"></h3>
+                    
+                    <p>
+                        <a class="btn btn-primary btn-large" id="btnIniciar" href="#">Iniciar</a>
+                    </p>
+                </div>
+                <div class="row cold-md-12">
+                    <div id="mostrar">
+                        <!-- <div class="row">
+                            <div class="col-md-12">
+                                <h2>Tecnicos especializados</h2>
+                            </div>
+                        </div>
+                        <div class="row" id="mostrar">
+                            <div class="col-md-12">
+                              
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div id="informacionReparacion" style="display:none; margin-top: 20px; margin-left: 20px;">
+                        <h3>Información del proceso de reparación:</h3>
+                        <p><strong>Número de celular :</strong> <span id="infoNumeroCelular"></span></p>
+                        <p><strong>IMEI :</strong> <span id="infoIMEI"></span></p>
+                        <p><strong>Sistema Operativo :</strong> <span id="infoSO"></span></p>
+                        <p><strong>Especialista asignado :</strong> <span id="infoTecnico"></span></p>
+                        <p><strong>Diagnostico :</strong> <span id="infoComentario"></span></p>
+                        <p><strong>¿ Autorizado ? :</strong> <span id="infoautorizacion"></span></p>
+                        <p><strong>¿ Pagado ? :</strong> <span id="infoservicio"></span></p>
+                        <p><strong>¿ Que repuestos necesita ? :</strong> <span id="inforepuesto"></span></p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        let objParametros={
+            ciudad: "Lima"
+        }
+        let objInicio = Inicio.init(objParametros);
+    </script>
+</body>
+</html>
