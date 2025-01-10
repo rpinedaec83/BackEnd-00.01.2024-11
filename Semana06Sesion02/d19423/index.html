@@ -60,6 +60,7 @@
             a escala, música, juguetes, ropa, comida, etc. </p>
           <p>
             <a id="addKit" class="btn btn-primary btn-large" href="#">Agregar</a>
+            <a id="delAllKits" class="btn btn-primary btn-large" href="#">Borrar Todo</a>
           </p>
         </div>
         <div class="row">
@@ -72,19 +73,18 @@
                   <th data-field="nombre">Nombre</th>
                   <th data-field="descripcion">Descripcion</th>
                   <th data-field="escala">Escala</th>
+                  <th data-field="accion" data-formatter="accionFormater" data-events="accionEvents">Acciones</th>
                 </tr>
               </thead>
             </table>
           </div>
           <div class="col-md-6">
             <div class="card">
-              <h5 class="card-header">
-                Kits
+              <h5 id="card-header" class="card-header">
+                
               </h5>
-              <div class="card-body">
-                <p class="card-text">
-                  Card content
-                </p>
+              <div id="card-body" class="card-body">
+                
               </div>
               <!-- <div class="card-footer">
                   Card footer
