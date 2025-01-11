@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div class="reparacion">
+        <h1>Nueva reparacion</h1>
+    
+        <form id="reparacion">
+          <label for="nombre">Nombre del cliente</label>
+          <input type="text" id="nombre" required>
+            <br><br>
+          <label for="nserie">Número de Serie</label>
+          <input type="text" id="nserie" required>
+            <br><br>
+          <label for="nimei">IMEI</label>
+          <input type="text" id="nimei" required>
+            <br><br>
+          <label for="marca">Marca</label>
+          <select id="marca" required>
+            <option value="">Seleccione una marca</option>
+            <option value="Android">Android</option>
+            <option value="Apple">Apple</option>
+            <option value="Sony">Sony</option>
+            <option value="Huawei">Huawei</option>
+            <option value="Xiaomi">Xiaomi</option>
+          </select>
+          <br><br>
+          <label for="diagnostico">Diagnostico</label>
+          <select id="diagnostico" required>
+            <option value="">Seleccione el problema presente</option>
+            <option value="Pantalla rota">Pantalla rota</option>
+            <option value="Bateria desgastada">Bateria desgastada</option>
+            <option value="Transmisor dañado">Transmisor dañado</option>
+            <option value="Desactualizacion">Desactualizacion</option>
+            <option value="Circuito dañado">Circuito dañado</option>
+            <option value="Otro">Otro</option>
+          </select>
+          <br><br>
+          <button id="enviar">Enviar</button>
+        </form>
+    
+        <div class="salida" id="salida"></div>
+        <div class="salida2" id="salida2"></div>
+    </div>
+    <div class="resumen" id="resumen">
+      <div class="resu1" id="resu1">
+
+      </div>
+      <button id="confirmacion">Confirmar Reparación</button>
+      <div class="resu2" id="resu2">
+        
+
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
