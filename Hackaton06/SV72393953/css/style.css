@@ -1,0 +1,80 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: Arial, sans-serif;
+}
+
+#tablaTecnicos td {
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+    text-align: center; 
+}
+
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+tr:hover {
+    background-color: #ddd;
+}
+
+
+#mostrar {
+    font-size: 16px;
+    color: #333;
+    width:50%;
+}
+
+.elegir-btn {
+    background-color: #4CAF50;  
+    color: white;               
+    border: none;               
+    padding: 10px 20px;         
+    font-size: 16px;            
+    border-radius: 5px;         
+    cursor: pointer;          
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.elegir-btn:hover {
+    background-color: #45a049;  
+    transform: scale(1.05);      
+}
+
+.elegir-btn:active {
+    background-color: #388e3c;  
+    transform: scale(0.98);      
+}
+
+#informacionReparacion {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
