@@ -2,7 +2,7 @@
 
 ## LOGRO: utilizar nuevas funcionalidades ES6, utilizar Clases, Objetos y WebStorage. 
 
-### I.	Es hora de demostrar lo aprendido:
+### I.	Es hora de demostrar lo aprendido: 
 Demostrarás todo lo aprendido en este reto que se basará en las clases dictadas durante la semana.
 ### II.	Insumos para resolver el Reto:
 - Conocimientos adquiridos en las semanas posteriores
