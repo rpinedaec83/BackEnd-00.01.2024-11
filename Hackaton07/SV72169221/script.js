@@ -304,7 +304,29 @@ http.createServer(function (req, res) {
 
 
             break;
-            
+        case `/marte`:
+            let configmars = {
+                method: 'get',
+                maxBodyLength: Infinity,
+                url: 'https://api.nasa.gov/insight_weather/?api_key=QXGF5h6jazs0pz3LJbndLz219yLp3csqU4so8q6P&feedtype=json&ver=1.0',
+                headers: { }
+              };
+              
+              axios.request(configmars)
+              .then((response) => {
+                console.log(JSON.stringify(response.data));
+                res.write(`Llave invalidada`)
+                return res.end();
+              })
+              .catch((error) => {
+                console.log(error);
+                res.write(`Llave invalidada`)
+                return res.end();
+              });
+
+
+
+            break;    
 
 
         default:
