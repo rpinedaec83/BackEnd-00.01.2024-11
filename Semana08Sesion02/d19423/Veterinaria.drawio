@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36 OPR/115.0.0.0" version="26.0.7">
+  <diagram id="R2lEEEUBdFMjLlhIrx00" name="Entidad-Relacion">
+    <mxGraphModel dx="1593" dy="1529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0" extFonts="Permanent Marker^https://fonts.googleapis.com/css?family=Permanent+Marker">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-1" value="Sexo" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="90" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-2" value="+Id&lt;div&gt;+Descripción&lt;/div&gt;&lt;div&gt;+IsActive&lt;/div&gt;&lt;div&gt;+UsuarioCreacion&lt;/div&gt;&lt;div&gt;+FechaCreacion&lt;/div&gt;&lt;div&gt;+UsuarioModificacion&lt;/div&gt;&lt;div&gt;+FechaModificacion&amp;nbsp;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="dkU1kR-KutOSIDt3hoK6-1">
+          <mxGeometry y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-4" value="Usuario" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="140" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-5" value="+Id&lt;div&gt;+username&lt;/div&gt;&lt;div&gt;+password&lt;/div&gt;&lt;div&gt;+email&lt;/div&gt;&lt;div&gt;&lt;div&gt;+IsActive&lt;/div&gt;&lt;div&gt;+UsuarioCreacion&lt;/div&gt;&lt;div&gt;+FechaCreacion&lt;/div&gt;&lt;div&gt;+UsuarioModificacion&lt;/div&gt;&lt;div&gt;+FechaModificacio&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="dkU1kR-KutOSIDt3hoK6-4">
+          <mxGeometry y="50" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dkU1kR-KutOSIDt3hoK6-5" target="dkU1kR-KutOSIDt3hoK6-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-12" value="Especie" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="310" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-13" value="+Id&lt;div&gt;+Descripción&lt;/div&gt;&lt;div&gt;+IsActive&lt;/div&gt;&lt;div&gt;+UsuarioCreacion&lt;/div&gt;&lt;div&gt;+FechaCreacion&lt;/div&gt;&lt;div&gt;+UsuarioModificacion&lt;/div&gt;&lt;div&gt;+FechaModificacion&amp;nbsp;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="dkU1kR-KutOSIDt3hoK6-12">
+          <mxGeometry y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="dkU1kR-KutOSIDt3hoK6-5" target="dkU1kR-KutOSIDt3hoK6-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-15" value="Raza" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="520" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-16" value="+Id&lt;div&gt;+Descripción&lt;/div&gt;&lt;div&gt;+IsActive&lt;/div&gt;&lt;div&gt;+UsuarioCreacion&lt;/div&gt;&lt;div&gt;+FechaCreacion&lt;/div&gt;&lt;div&gt;+UsuarioModificacion&lt;/div&gt;&lt;div&gt;+FechaModificacion&amp;nbsp;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="dkU1kR-KutOSIDt3hoK6-15">
+          <mxGeometry y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-17" value="Color" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="710" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-18" value="+Id&lt;div&gt;+Descripción&lt;/div&gt;&lt;div&gt;+IsActive&lt;/div&gt;&lt;div&gt;+UsuarioCreacion&lt;/div&gt;&lt;div&gt;+FechaCreacion&lt;/div&gt;&lt;div&gt;+UsuarioModificacion&lt;/div&gt;&lt;div&gt;+FechaModificacion&amp;nbsp;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="dkU1kR-KutOSIDt3hoK6-17">
+          <mxGeometry y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-19" value="Nacionalidad" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="770" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-20" value="+Id&lt;div&gt;+Descripción&lt;/div&gt;&lt;div&gt;+IsActive&lt;/div&gt;&lt;div&gt;+UsuarioCreacion&lt;/div&gt;&lt;div&gt;+FechaCreacion&lt;/div&gt;&lt;div&gt;+UsuarioModificacion&lt;/div&gt;&lt;div&gt;+FechaModificacion&amp;nbsp;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="dkU1kR-KutOSIDt3hoK6-19">
+          <mxGeometry y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-21" value="Ubigeo" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-240" y="480" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-22" value="+Ubigeo&lt;div&gt;+Departamento&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+Provincia&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+Distrito&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+IsActive&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+UsuarioCreacion&lt;/div&gt;&lt;div&gt;+FechaCreacion&lt;/div&gt;&lt;div&gt;+UsuarioModificacion&lt;/div&gt;&lt;div&gt;+FechaModificacion&amp;nbsp;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="dkU1kR-KutOSIDt3hoK6-21">
+          <mxGeometry y="50" width="160" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-24" value="Vacunas" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="-150" width="160" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-25" value="+Id&lt;div&gt;+Descripción&lt;/div&gt;&lt;div&gt;+IsActive&lt;/div&gt;&lt;div&gt;+UsuarioCreacion&lt;/div&gt;&lt;div&gt;+FechaCreacion&lt;/div&gt;&lt;div&gt;+UsuarioModificacion&lt;/div&gt;&lt;div&gt;+FechaModificacion&amp;nbsp;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="dkU1kR-KutOSIDt3hoK6-24">
+          <mxGeometry y="50" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dkU1kR-KutOSIDt3hoK6-26" target="dkU1kR-KutOSIDt3hoK6-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-26" value="Propietario" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="540" width="160" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-27" value="+Id&lt;div&gt;+Nombres&lt;/div&gt;&lt;div&gt;+Apellidos&lt;br&gt;&lt;div&gt;+Direccion&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+Ubigeo&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+Telefono&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+IdNacionalidad&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+IsActive&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+UsuarioCreacion&lt;/div&gt;&lt;div&gt;+FechaCreacion&lt;/div&gt;&lt;div&gt;+UsuarioModificacion&lt;/div&gt;&lt;div&gt;+FechaModificacion&amp;nbsp;&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="dkU1kR-KutOSIDt3hoK6-26">
+          <mxGeometry y="50" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.607;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="dkU1kR-KutOSIDt3hoK6-20" target="dkU1kR-KutOSIDt3hoK6-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dkU1kR-KutOSIDt3hoK6-22" target="dkU1kR-KutOSIDt3hoK6-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dkU1kR-KutOSIDt3hoK6-30" target="dkU1kR-KutOSIDt3hoK6-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-30" value="Mascota" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="160" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-31" value="+Id&lt;div&gt;+Nombre&lt;/div&gt;&lt;div&gt;+FechaNacimiento&lt;br&gt;&lt;div&gt;+Peso&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+idSexo&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+IdEspecie&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+IdRaza&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+IdColor&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+IdPropietario&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+IsActive&lt;/span&gt;&lt;/div&gt;&lt;div&gt;+UsuarioCreacion&lt;/div&gt;&lt;div&gt;+FechaCreacion&lt;/div&gt;&lt;div&gt;+UsuarioModificacion&lt;/div&gt;&lt;div&gt;+FechaModificacion&amp;nbsp;&lt;/div&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="dkU1kR-KutOSIDt3hoK6-30">
+          <mxGeometry y="50" width="160" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.938;entryY=0.348;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="dkU1kR-KutOSIDt3hoK6-1" target="dkU1kR-KutOSIDt3hoK6-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dkU1kR-KutOSIDt3hoK6-13" target="dkU1kR-KutOSIDt3hoK6-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.809;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="dkU1kR-KutOSIDt3hoK6-16" target="dkU1kR-KutOSIDt3hoK6-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dkU1kR-KutOSIDt3hoK6-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.006;entryY=0.835;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="dkU1kR-KutOSIDt3hoK6-18" target="dkU1kR-KutOSIDt3hoK6-31">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
