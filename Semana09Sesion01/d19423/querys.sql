@@ -1,6 +1,9 @@
 -- DDL
 -- create database Veterinaria;
 -- drop database Veterinaria;
+drop database if exists Veterinaria;
+create database Veterinaria;
+use Veterinaria;
 drop table if exists mascota_vacuna;
 drop table if exists mascotas;
 drop table if exists propietarios;
