@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "67a96cd452d4e3cdf06f9f6c"
+  },
+  "nombre": "Juan Pérez",
+  "cargo": "Carpintero",
+  "edad": 35,
+  "sueldo": 2500,
+  "horas_laboradas": 40
+},
+{
+  "_id": {
+    "$oid": "67a96cd452d4e3cdf06f9f6d"
+  },
+  "nombre": "Ana Gómez",
+  "cargo": "Supervisora",
+  "edad": 40,
+  "sueldo": 3200,
+  "horas_laboradas": 30
+},
+{
+  "_id": {
+    "$oid": "67a96cd452d4e3cdf06f9f6e"
+  },
+  "nombre": "Carlos Torres",
+  "cargo": "Operario",
+  "edad": 28,
+  "sueldo": 1800,
+  "horas_laboradas": 35
+},
+{
+  "_id": {
+    "$oid": "67a96cd452d4e3cdf06f9f6f"
+  },
+  "nombre": "María Ruiz",
+  "cargo": "Diseñadora",
+  "edad": 30,
+  "sueldo": 2900,
+  "horas_laboradas": 45
+}]

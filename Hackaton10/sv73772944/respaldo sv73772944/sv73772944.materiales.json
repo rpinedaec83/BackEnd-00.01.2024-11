@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "67a96bf652d4e3cdf06f9f5c"
+  },
+  "nombre": "Madera",
+  "proveedor": "Maderas S.A.",
+  "cantidad": 380,
+  "unidad": "kg"
+},
+{
+  "_id": {
+    "$oid": "67a96bf652d4e3cdf06f9f5d"
+  },
+  "nombre": "Melamina",
+  "proveedor": "Melaminas Perú",
+  "cantidad": 280,
+  "unidad": "m2"
+},
+{
+  "_id": {
+    "$oid": "67a96bf652d4e3cdf06f9f5e"
+  },
+  "nombre": "Bisagras",
+  "proveedor": "Herrajes Express",
+  "cantidad": 180,
+  "unidad": "unidades"
+},
+{
+  "_id": {
+    "$oid": "67a96bf652d4e3cdf06f9f5f"
+  },
+  "nombre": "Tornillos",
+  "proveedor": "Fijaciones SAC",
+  "cantidad": 700,
+  "unidad": "unidades"
+}]
