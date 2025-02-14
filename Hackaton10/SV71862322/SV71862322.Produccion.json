@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "67abe9b24fb42877d40128ed"
+  },
+  "producto": "Armario de pino",
+  "cantidad": 5,
+  "fechaProduccion": {
+    "$date": "2020-01-01T00:00:00.000Z"
+  },
+  "personalInvolucrado": [
+    1,
+    2
+  ],
+  "materiaPrima": [
+    1
+  ],
+  "insumosUtilizados": [
+    1,
+    2
+  ],
+  "fechaInicio": {
+    "$date": "2025-01-01T00:00:00.000Z"
+  }
+}]

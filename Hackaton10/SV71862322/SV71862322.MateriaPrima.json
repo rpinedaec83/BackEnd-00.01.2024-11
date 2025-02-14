@@ -1,0 +1,22 @@
+[{
+  "_id": 1,
+  "nombre": "Madera de pino",
+  "cantidad": 100,
+  "unidad": "metros cubicos",
+  "proveedor": "Madeira S.A.C",
+  "fechaCompra": {
+    "$date": "2025-02-08T00:00:00.000Z"
+  },
+  "constoTotal": 1200
+},
+{
+  "_id": 2,
+  "nombre": "Acero",
+  "cantidad": 10,
+  "unidad": "metros cubicos",
+  "proveedor": "Acero arequipa S.A.C",
+  "fechaCompra": {
+    "$date": "2025-02-07T00:00:00.000Z"
+  },
+  "constoTotal": 20000
+}]
