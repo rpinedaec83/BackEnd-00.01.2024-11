@@ -34,6 +34,8 @@ La empresa de produccion de armarios necesita llevar el control de las siguiente
 - Produccion
 
 Se debe crear la base de datos (el nombre va a ser su codigo de alumno), las consultas en SQL y se va a copiar en un archivo de texto plano .sql
+Se debe crear un StoreProcedure del tipo CRUD para interactuar con la informacion de las tabalas
+Se debe crear los TRIGGERS donde se considere necesario
 
 El entregable va a ser el respaldo de la base de datos relacional
 
