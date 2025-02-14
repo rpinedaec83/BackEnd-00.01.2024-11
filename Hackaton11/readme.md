@@ -1,6 +1,6 @@
 # HACKATHON SEMANAL
 
-## LOGRO: Utilizar USAR MONGODB. 
+## LOGRO: Utilizar USAR MYSQL. 
 
 ### I.	Es hora de demostrar lo aprendido:
 Demostrarás todo lo aprendido en este reto que se basará en las clases dictadas durante la semana.
