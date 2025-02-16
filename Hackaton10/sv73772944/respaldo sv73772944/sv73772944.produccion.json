@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "67a96d5752d4e3cdf06f9f70"
+  },
+  "producto": "Armario de madera",
+  "cantidad": 10,
+  "fecha": {
+    "$date": "2025-02-10T00:00:00.000Z"
+  },
+  "responsable": "Juan Pérez",
+  "material_usado": {
+    "madera": 50,
+    "bisagras": 20,
+    "tornillos": 100
+  },
+  "insumo_usado": {
+    "pegamento": 5,
+    "barniz": 3
+  },
+  "horas_trabajadas": 40
+},
+{
+  "_id": {
+    "$oid": "67a96d5752d4e3cdf06f9f71"
+  },
+  "producto": "Estantería",
+  "cantidad": 5,
+  "fecha": {
+    "$date": "2025-02-11T00:00:00.000Z"
+  },
+  "responsable": "Ana Gómez",
+  "material_usado": {
+    "melamina": 20,
+    "tornillos": 50
+  },
+  "insumo_usado": {
+    "pegamento": 2,
+    "barniz": 2
+  },
+  "horas_trabajadas": 30
+},
+{
+  "_id": {
+    "$oid": "67a96d5752d4e3cdf06f9f72"
+  },
+  "producto": "Escritorio",
+  "cantidad": 7,
+  "fecha": {
+    "$date": "2025-02-12T00:00:00.000Z"
+  },
+  "responsable": "Carlos Torres",
+  "material_usado": {
+    "madera": 30,
+    "tornillos": 70
+  },
+  "insumo_usado": {
+    "pintura": 4,
+    "pegamento": 3
+  },
+  "horas_trabajadas": 35
+},
+{
+  "_id": {
+    "$oid": "67a96d5752d4e3cdf06f9f73"
+  },
+  "producto": "Mesa de noche",
+  "cantidad": 12,
+  "fecha": {
+    "$date": "2025-02-13T00:00:00.000Z"
+  },
+  "responsable": "María Ruiz",
+  "material_usado": {
+    "madera": 40,
+    "tornillos": 80
+  },
+  "insumo_usado": {
+    "pegamento": 4,
+    "barniz": 5
+  },
+  "horas_trabajadas": 45
+}]

@@ -1,0 +1,200 @@
+use sv73772944;
+switched to db sv73772944
+db.materiales.insertMany([
+    { nombre: "Madera", proveedor: "Maderas S.A.", cantidad: 500, unidad: "kg" },
+    { nombre: "Melamina", proveedor: "Melaminas Perú", cantidad: 300, unidad: "m2" },
+    { nombre: "Bisagras", proveedor: "Herrajes Express", cantidad: 200, unidad: "unidades" },
+    { nombre: "Tornillos", proveedor: "Fijaciones SAC", cantidad: 1000, unidad: "unidades" }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67a96bf652d4e3cdf06f9f5c'),
+    '1': ObjectId('67a96bf652d4e3cdf06f9f5d'),
+    '2': ObjectId('67a96bf652d4e3cdf06f9f5e'),
+    '3': ObjectId('67a96bf652d4e3cdf06f9f5f')
+  }
+}
+db.insumos.insertMany([
+    { nombre: "Pegamento", tipo: "Adhesivo industrial", cantidad: 50, unidad: "litros" },
+    { nombre: "Barniz", tipo: "Protector de madera", cantidad: 40, unidad: "litros" },
+    { nombre: "Pintura", tipo: "Acrílica", cantidad: 30, unidad: "litros" },
+    { nombre: "Cinta adhesiva", tipo: "Doble cara", cantidad: 100, unidad: "rollos" }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67a96bfa52d4e3cdf06f9f60'),
+    '1': ObjectId('67a96bfa52d4e3cdf06f9f61'),
+    '2': ObjectId('67a96bfa52d4e3cdf06f9f62'),
+    '3': ObjectId('67a96bfa52d4e3cdf06f9f63')
+  }
+}
+db.personal.insertMany([
+    { nombre: "Juan Pérez", cargo: "Carpintero", edad: 35, sueldo: 2500 },
+    { nombre: "Ana Gómez", cargo: "Supervisora", edad: 40, sueldo: 3200 },
+    { nombre: "Carlos Torres", cargo: "Operario", edad: 28, sueldo: 1800 },
+    { nombre: "María Ruiz", cargo: "Diseñadora", edad: 30, sueldo: 2900 }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67a96c0252d4e3cdf06f9f64'),
+    '1': ObjectId('67a96c0252d4e3cdf06f9f65'),
+    '2': ObjectId('67a96c0252d4e3cdf06f9f66'),
+    '3': ObjectId('67a96c0252d4e3cdf06f9f67')
+  }
+}
+db.produccion.insertMany([
+    { producto: "Armario de madera", cantidad: 20, fecha: new Date("2025-02-01"), responsable: "Juan Pérez" },
+    { producto: "Estantería", cantidad: 15, fecha: new Date("2025-02-02"), responsable: "Carlos Torres" },
+    { producto: "Escritorio", cantidad: 10, fecha: new Date("2025-02-03"), responsable: "Ana Gómez" },
+    { producto: "Mesa de noche", cantidad: 25, fecha: new Date("2025-02-04"), responsable: "María Ruiz" }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67a96c0752d4e3cdf06f9f68'),
+    '1': ObjectId('67a96c0752d4e3cdf06f9f69'),
+    '2': ObjectId('67a96c0752d4e3cdf06f9f6a'),
+    '3': ObjectId('67a96c0752d4e3cdf06f9f6b')
+  }
+}
+db.produccion.drop();
+true
+db.personal.drop();
+true
+db.personal.insertMany([
+    { nombre: "Juan Pérez", cargo: "Carpintero", edad: 35, sueldo: 2500, horas_laboradas: 0 },
+    { nombre: "Ana Gómez", cargo: "Supervisora", edad: 40, sueldo: 3200, horas_laboradas: 0 },
+    { nombre: "Carlos Torres", cargo: "Operario", edad: 28, sueldo: 1800, horas_laboradas: 0 },
+    { nombre: "María Ruiz", cargo: "Diseñadora", edad: 30, sueldo: 2900, horas_laboradas: 0 }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67a96cd452d4e3cdf06f9f6c'),
+    '1': ObjectId('67a96cd452d4e3cdf06f9f6d'),
+    '2': ObjectId('67a96cd452d4e3cdf06f9f6e'),
+    '3': ObjectId('67a96cd452d4e3cdf06f9f6f')
+  }
+}
+db.produccion.insertMany([
+    { producto: "Armario de madera", cantidad: 10, fecha: new Date("2025-02-10"), responsable: "Juan Pérez", material_usado: { madera: 50, bisagras: 20, tornillos: 100 }, insumo_usado: { pegamento: 5, barniz: 3 }, horas_trabajadas: 40 },
+    { producto: "Estantería", cantidad: 5, fecha: new Date("2025-02-11"), responsable: "Ana Gómez", material_usado: { melamina: 20, tornillos: 50 }, insumo_usado: { pegamento: 2, barniz: 2 }, horas_trabajadas: 30 },
+    { producto: "Escritorio", cantidad: 7, fecha: new Date("2025-02-12"), responsable: "Carlos Torres", material_usado: { madera: 30, tornillos: 70 }, insumo_usado: { pintura: 4, pegamento: 3 }, horas_trabajadas: 35 },
+    { producto: "Mesa de noche", cantidad: 12, fecha: new Date("2025-02-13"), responsable: "María Ruiz", material_usado: { madera: 40, tornillos: 80 }, insumo_usado: { pegamento: 4, barniz: 5 }, horas_trabajadas: 45 }
+]);
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67a96d5752d4e3cdf06f9f70'),
+    '1': ObjectId('67a96d5752d4e3cdf06f9f71'),
+    '2': ObjectId('67a96d5752d4e3cdf06f9f72'),
+    '3': ObjectId('67a96d5752d4e3cdf06f9f73')
+  }
+}
+db.materiales.updateOne({ nombre: "Madera" }, { $inc: { cantidad: -120 } });
+db.materiales.updateOne({ nombre: "Melamina" }, { $inc: { cantidad: -20 } });
+db.materiales.updateOne({ nombre: "Bisagras" }, { $inc: { cantidad: -20 } });
+db.materiales.updateOne({ nombre: "Tornillos" }, { $inc: { cantidad: -300 } });
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.insumos.updateOne({ nombre: "Pegamento" }, { $inc: { cantidad: -14 } });
+db.insumos.updateOne({ nombre: "Barniz" }, { $inc: { cantidad: -10 } });
+db.insumos.updateOne({ nombre: "Pintura" }, { $inc: { cantidad: -4 } });
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+db.personal.updateOne({ nombre: "Juan Pérez" }, { $inc: { horas_laboradas: 40 } });
+db.personal.updateOne({ nombre: "Ana Gómez" }, { $inc: { horas_laboradas: 30 } });
+db.personal.updateOne({ nombre: "Carlos Torres" }, { $inc: { horas_laboradas: 35 } });
+db.personal.updateOne({ nombre: "María Ruiz" }, { $inc: { horas_laboradas: 45 } });
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+db.materiales.find().pretty();
+db.insumos.find().pretty();
+db.personal.find().pretty();
+db.produccion.find().pretty();
+{
+  _id: ObjectId('67a96d5752d4e3cdf06f9f70'),
+  producto: 'Armario de madera',
+  cantidad: 10,
+  fecha: 2025-02-10T00:00:00.000Z,
+  responsable: 'Juan Pérez',
+  material_usado: {
+    madera: 50,
+    bisagras: 20,
+    tornillos: 100
+  },
+  insumo_usado: {
+    pegamento: 5,
+    barniz: 3
+  },
+  horas_trabajadas: 40
+}
+{
+  _id: ObjectId('67a96d5752d4e3cdf06f9f71'),
+  producto: 'Estantería',
+  cantidad: 5,
+  fecha: 2025-02-11T00:00:00.000Z,
+  responsable: 'Ana Gómez',
+  material_usado: {
+    melamina: 20,
+    tornillos: 50
+  },
+  insumo_usado: {
+    pegamento: 2,
+    barniz: 2
+  },
+  horas_trabajadas: 30
+}
+{
+  _id: ObjectId('67a96d5752d4e3cdf06f9f72'),
+  producto: 'Escritorio',
+  cantidad: 7,
+  fecha: 2025-02-12T00:00:00.000Z,
+  responsable: 'Carlos Torres',
+  material_usado: {
+    madera: 30,
+    tornillos: 70
+  },
+  insumo_usado: {
+    pintura: 4,
+    pegamento: 3
+  },
+  horas_trabajadas: 35
+}
+{
+  _id: ObjectId('67a96d5752d4e3cdf06f9f73'),
+  producto: 'Mesa de noche',
+  cantidad: 12,
+  fecha: 2025-02-13T00:00:00.000Z,
+  responsable: 'María Ruiz',
+  material_usado: {
+    madera: 40,
+    tornillos: 80
+  },
+  insumo_usado: {
+    pegamento: 4,
+    barniz: 5
+  },
+  horas_trabajadas: 45
+}
+Atlas atlas-13ubw2-shard-0 [primary] sv73772944
+
