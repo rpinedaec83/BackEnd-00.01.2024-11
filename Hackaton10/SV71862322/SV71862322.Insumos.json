@@ -1,0 +1,22 @@
+[{
+  "_id": 1,
+  "nombre": "Tornillos",
+  "cantidad": 250,
+  "unidad": "unidades",
+  "Proveedor": "Ferreteria XYZ",
+  "fechaCompra": {
+    "$date": "2025-02-08T00:00:00.000Z"
+  },
+  "costoTotal": 200
+},
+{
+  "_id": 2,
+  "nombre": "Pegamento liquido",
+  "cantidad": 5,
+  "unidad": "unidades",
+  "Proveedor": "Pegamento S.A.C",
+  "fechaCompra": {
+    "$date": "2025-02-07T00:00:00.000Z"
+  },
+  "costoTotal": 25
+}]
