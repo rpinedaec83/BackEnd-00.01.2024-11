@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "67a96bfa52d4e3cdf06f9f60"
+  },
+  "nombre": "Pegamento",
+  "tipo": "Adhesivo industrial",
+  "cantidad": 36,
+  "unidad": "litros"
+},
+{
+  "_id": {
+    "$oid": "67a96bfa52d4e3cdf06f9f61"
+  },
+  "nombre": "Barniz",
+  "tipo": "Protector de madera",
+  "cantidad": 30,
+  "unidad": "litros"
+},
+{
+  "_id": {
+    "$oid": "67a96bfa52d4e3cdf06f9f62"
+  },
+  "nombre": "Pintura",
+  "tipo": "Acrílica",
+  "cantidad": 26,
+  "unidad": "litros"
+},
+{
+  "_id": {
+    "$oid": "67a96bfa52d4e3cdf06f9f63"
+  },
+  "nombre": "Cinta adhesiva",
+  "tipo": "Doble cara",
+  "cantidad": 100,
+  "unidad": "rollos"
+}]

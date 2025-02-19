@@ -1,0 +1,123 @@
+Crear la base de datos
+use SV71862322
+
+Crear colecciones e insertar datos
+db.Insumos.insertMany([
+  {
+    _id: 1,
+    nombre: "Tornillos",
+    cantidad: 250,
+    unidad: "unidades",
+    proveedor: "Ferreteria XYZ",
+    fechaCompra: ISODate("2025-02-08T00:00:00.000Z"),
+    costoTotal: 200
+  },
+  {
+    _id: 2,
+    nombre: "Pegamento liquido",
+    cantidad: 5,
+    unidad: "unidades",
+    proveedor: "Pegamento S.A.C",
+    fechaCompra: ISODate("2025-02-07T00:00:00.000Z"),
+    costoTotal: 25
+  }
+])
+db.MateriaPrima.insertMany([
+  {
+    _id: 1,
+    nombre: "Madera de pino",
+    cantidad: 100,
+    unidad: "metros cubicos",
+    proveedor: "Madeira S.A.C",
+    fechaCompra: ISODate("2025-02-08T00:00:00.000Z"),
+    costoTotal: 1200
+  },
+  {
+    _id: 2,
+    nombre: "Acero",
+    cantidad: 10,
+    unidad: "metros cubicos",
+    proveedor: "Acero Arequipa S.A.C",
+    fechaCompra: ISODate("2025-02-07T00:00:00.000Z"),
+    costoTotal: 20000
+  }
+])
+db.Personal.insertMany([
+  {
+    _id: ObjectId("67abe84e4fb42877d40128eb"),
+    nombre: "Juan Pérez",
+    puesto: "Carpintero",
+    sueldo: 2200,
+    fechaInicio: ISODate("2025-01-01T00:00:00.000Z")
+  },
+  {
+    _id: ObjectId("67abe84e4fb42877d40128ec"),
+    nombre: "Ana Gomez",
+    puesto: "Acabados",
+    sueldo: 1800,
+    fechaInicio: ISODate("2025-01-02T00:00:00.000Z")
+  }
+])
+db.Produccion.insertMany([
+  {
+    _id: ObjectId("67abe9b24fb42877d40128ed"),
+    producto: "Armario de pino",
+    cantidad: 5,
+    fechaProduccion: ISODate("2020-01-01T00:00:00.000Z"),
+    personalInvolucrado: [1, 2],
+    materiaPrima: [1],
+    insumosUtilizados: [1, 2],
+    fechaInicio: ISODate("2025-01-01T00:00:00.000Z")
+  }
+])
+
+Mostrar todos los insumos
+db.Insumos.find().pretty()
+
+Mostrar insumos con cantidad mayor a 100
+db.Insumos.find({ cantidad: { $gt: 100 } }).pretty()
+
+Buscar un insumo específico  (Tornillos)
+db.Insumos.find({ nombre: "Tornillos" }).pretty()
+
+Mostrar todos los empleados (personal)
+db.Personal.find().pretty()
+
+Obtener empleados con sueldo mayor a 2000
+db.Personal.find({ sueldo: { $gt: 2000 } }).pretty()
+
+Mostrar producción de "Armario de pino"
+db.Produccion.find({ producto: "Armario de pino" }).pretty()
+
+Total gastado en materia prima
+db.MateriaPrima.aggregate([
+  { $group: { _id: null, totalGasto: { $sum: "$costoTotal" } } }
+])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

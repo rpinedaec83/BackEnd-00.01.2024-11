@@ -1,0 +1,116 @@
+
+use SV45067689
+
+db.insumos.insertMany([
+    {
+        _id:1,
+        nombre:"Tornillos",
+        cantidad: 250,
+        unidad: "unidades",
+        prooveedor: "Ferreteria S.A.C.",
+        fechaConpra: ISODate(),
+        costoTotal: 200
+    },
+      {
+        _id:2,
+        nombre:"Pegamento Liquido",
+        cantidad: 5,
+        unidad: "unidades",
+        prooveedor: "PegaTodo SA",
+        fechaConpra: ISODate(),
+        costoTotal: 25
+    }
+])
+
+db.personal.insertMany([
+    {
+         _id:1,
+        nombre:"Juan Perez",
+        puesto: "Carpintero",
+        salario: "1500",
+        FechaInicio: ISODate("2024-10-01")
+    },
+        {
+         _id:2,
+        nombre:"Juan Perez",
+        puesto: "Acabados",
+        salario: "1800",
+        FechaInicio: ISODate("2025-01-01")
+    }
+])
+
+db.produccion.insertMany([
+    {
+        id:1,
+        producto:"Armario de Pino",
+        cantidad: 5,
+        fechaProduccion: ISODate("2025-02-01"),
+        PersonalInvolucrado:[1,2],
+        maeteriaPrimaUtilizada: [1],
+        insumosUtilizados: [1,2]
+    }
+])
+
+
+db.personal.updateOne(
+    {
+    _id:2
+    },
+    {$set:{nombre:"Ana Acebedo"}}
+);
+
+// consultas
+
+db.materiaPrima.find(
+    {
+        fechaConpra:{
+            $gte:ISODate("2025-02-07T00:00:00.000Z"),
+            $lte:ISODate("2025-02-09T00:00:00.000Z")
+        }
+    }
+)
+
+// calcular Total ganado por personal desde el Incio
+
+const empleado = db.personal.findOne({_id:1})
+print(empleado)
+
+const fechaContratacion = empleado.FechaInicio;
+const salarioMensual = empleado.salario;
+const fechaActual = new Date();
+const diffMeses = (fechaActual.getFullYear() - fechaContratacion.getFullYear()) * 12 + (fechaActual.getMonth() - fechaContratacion.getMonth());
+print (diffMeses)
+const totalGanado = salarioMensual * diffMeses;
+print(totalGanado)
+
+
+
+db.produccion.aggregate([
+    {
+        $lookup:{
+        from: "personal", // la coleccion con la que queremos unir
+        localField: "PersonalInvolucrado", // campo union con la coleccion
+        foreignField: "_id",
+        as : "personalDetalle"
+        }
+    },
+    {
+    $project:{
+        producto:1,
+        cantidad:1,
+        fechaProduccion:1,
+        personalDetalle:{
+            nombre:1,
+            puesto:1
+        }
+
+    }
+    }
+]);
+
+
+db.materiaPrima.find()
+db.insumos.find()
+db.personal.find()
+db.produccion.find()
+db.produccion.drop()
