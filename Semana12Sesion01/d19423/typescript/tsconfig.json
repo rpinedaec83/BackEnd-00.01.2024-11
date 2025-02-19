@@ -1,0 +1,6 @@
+{
+  "include": ["typescript/src"],
+  "compilerOptions": {
+    "outDir": "typescript/build"
+  }
+}
