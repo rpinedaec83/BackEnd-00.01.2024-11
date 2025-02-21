@@ -6,7 +6,10 @@ app.use(express.json());
 
 const UserRouter = require('./users/route.config');
 UserRouter.routesConfig(app);
-
+app.use(function(req,res,next){
+    console.log(req.query);
+    next()
+})
 app.get('/', (req,res)=>{
     res.send({message:"Hola desde mi API"})
 })
