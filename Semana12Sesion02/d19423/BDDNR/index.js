@@ -2,9 +2,13 @@ const express = require('express');
 const app  = express();
 require('dotenv').config();
 const PORT = process.env.PORT || 8000;
+app.use(express.json());
+
+const UserRouter = require('./users/route.config');
+UserRouter.routesConfig(app);
 
 app.get('/', (req,res)=>{
-    res.send("Hello from my API")
+    res.send({message:"Hola desde mi API"})
 })
 
 app.listen(PORT,function(){
