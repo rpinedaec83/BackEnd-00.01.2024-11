@@ -20,17 +20,49 @@ app.use(
 app.get('/',(req,res)=>{
     res.send({message:"Bienvenido a mi API"})
 });
+require('./app/routes/auth.routes')(app);
 
 const db = require('./app/models');
 const Role = db.role;
 
 db.mongoose.connect(process.env.MONGOURI,{}).then(()=>{
-    console.log("Base de datos conectada")
+    console.log("Base de datos conectada");
+    init()
 }).catch((err)=>{
     console.error(err);
     process.exit();
 })
 
+function init(){
+    Role.estimatedDocumentCount((err,count)=>{
+        if(!err & count === 0){
+            new Role({
+                name: "user"
+            }).save((err)=>{
+                if(err){
+                    console.log("Error al crear el rol usuario")
+                }
+                console.log("Rol usuario creado")
+            });
+            new Role({
+                name: "moderator"
+            }).save((err)=>{
+                if(err){
+                    console.log("Error al crear el rol moderator")
+                }
+                console.log("Rol moderator creado")
+            });
+            new Role({
+                name: "admin"
+            }).save((err)=>{
+                if(err){
+                    console.log("Error al crear el rol admin")
+                }
+                console.log("Rol admin creado")
+            });
+        }
+    })
+}
 
 
 
