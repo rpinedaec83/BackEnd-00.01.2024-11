@@ -14,6 +14,6 @@ export const updateCourses = (req, res) => {
     return res.send('updateCourses')
 }
 
-export const deleteCourses = (req, res) => {
+export const deleteCourses = (req, res) =>{
     return res.send('deleteCourses')
 }
