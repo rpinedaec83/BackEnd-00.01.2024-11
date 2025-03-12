@@ -5,3 +5,7 @@ exports.allAccess=(req,res)=>{
 exports.userBoard=(req,res)=>{
     res.status(200).send("Contenido del USer")
 }
+
+exports.moderatorBoard=(req,res)=>{
+    res.status(200).send("Contenido del moderador")
+}

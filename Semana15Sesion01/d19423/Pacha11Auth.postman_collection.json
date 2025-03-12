@@ -138,6 +138,29 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "TestModerator",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4569/api/test/moderator",
+					"host": [
+						"localhost"
+					],
+					"port": "4569",
+					"path": [
+						"api",
+						"test",
+						"moderator"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

@@ -21,7 +21,28 @@ verifyToken = (req,res,next)=>{
     )
 }
 
+isModerator = (req,res,next)=>{
+    User.findById(req.userId).exec((err, user)=>{
+        if(err){
+            res.status(500).send({message: err})
+        }
+        Role.find({_id: {$in: user.roles}}, (err, roles)=>{
+            if(err){
+                res.status(500).send({message: err})
+            }
+            for (let index = 0; index < roles.length; index++) {
+                const element = roles[index];
+                if(element.name==='moderator'){
+                    next();
+                    return;
+                }
+                res.status(403).send({message:"Se requiere rol de moderador"})
+            }
+        })
+    })
+}
+
 const authJwt = {
-    verifyToken
+    verifyToken, isModerator
 }
 module.exports = authJwt;
