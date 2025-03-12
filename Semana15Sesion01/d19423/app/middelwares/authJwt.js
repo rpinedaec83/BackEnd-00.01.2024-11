@@ -36,13 +36,42 @@ isModerator = (req,res,next)=>{
                     next();
                     return;
                 }
-                res.status(403).send({message:"Se requiere rol de moderador"})
+                
             }
+            res.status(403).send({message:"Se requiere rol de moderador"})
         })
     })
 }
 
+isAdmin = (req,res,next)=>{
+    try {
+        User.findById(req.userId).exec((err, user)=>{
+            if(err){
+                res.status(500).send({message: err})
+            }
+            Role.find({_id: {$in: user.roles}}, (err, roles)=>{
+                console.log(roles)
+                if(err){
+                    res.status(500).send({message: err})
+                }
+                for (let index = 0; index < roles.length; index++) {
+                    const element = roles[index];
+                    if(element.name==="admin"){
+                        next();
+                        return;
+                    }
+                    
+                }
+                res.status(403).send({message:"Se requiere rol de admin"})
+            })
+        })
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
 const authJwt = {
-    verifyToken, isModerator
+    verifyToken, isModerator, isAdmin
 }
 module.exports = authJwt;

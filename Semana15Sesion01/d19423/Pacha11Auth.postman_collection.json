@@ -161,6 +161,29 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "TestAdmin",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:4569/api/test/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "4569",
+					"path": [
+						"api",
+						"test",
+						"admin"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
