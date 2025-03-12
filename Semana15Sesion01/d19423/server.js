@@ -21,6 +21,7 @@ app.get('/',(req,res)=>{
     res.send({message:"Bienvenido a mi API"})
 });
 require('./app/routes/auth.routes')(app);
+require('./app/routes/user.routes')(app);
 
 const db = require('./app/models');
 const Role = db.role;
