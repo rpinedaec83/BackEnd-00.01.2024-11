@@ -26,8 +26,16 @@ module.exports= (io)=>{
             await Note.findByIdAndDelete(id);
             emitNotes();//actualiza todas las ventanas io.emit
         })
-        socket.on('cliente:getnote',id=>{
-            console.log(id);
+        socket.on('cliente:getnote',async id=>{
+            const note = await Note.findById(id);
+            io.emit('server:selectednote',note);//el cliente va a escuchar este evento del servidor 
+        })
+        socket.on('cliente:updatenote',async updatednote=>{
+            await Note.findByIdAndUpdate(updatednote._id,{
+                title:updatednote.title,
+                description:updatednote.description
+            })
+            emitNotes();
         })
 
     })

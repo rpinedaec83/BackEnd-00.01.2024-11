@@ -1,7 +1,11 @@
 //funciones que interactuan con la interfaz del usuario
-import { savenotes,deletenote,getnotebyid } from "./socket.js";
+import { savenotes,deletenote,getnotebyid,updatenote } from "./socket.js";
 
 const noteList=document.querySelector('#notas');
+const title = document.querySelector('#title');
+const description = document.querySelector('#description');
+
+let saveId="";
 
 //funcion para crear una sola nota 
 
@@ -39,7 +43,14 @@ export function onHandleSubmit(e){
     e.preventDefault();//se cancela el evento default de refrescar la página
 
     
-    savenotes(noteform["title"].value,noteform["description"].value);
+    if(saveId){
+        updatenote(saveId, title.value,description.value);
+    }else{
+        savenotes(noteform["title"].value,noteform["description"].value);
+    }
+    saveId="";//Luego de actualizar o agregar una nota el formulario o campos de texto se limpian
+    title.value="";
+    description.value="";
 }
 
 
@@ -48,3 +59,8 @@ export function appendNote(note){
     noteList.append(noteUI(note));
 }
 
+export function fillForm(note){
+    title.value=note.title;
+    description.value=note.description;
+    saveId=note._id;
+}

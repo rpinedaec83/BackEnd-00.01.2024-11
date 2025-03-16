@@ -42,4 +42,15 @@ export function getnotebyid(id){
 
 }
 
+export function onSelected(callback){
+    socket.on('server:selectednote',callback)
+}
 
+export function updatenote(id,title,description){
+    socket.emit('cliente:updatenote',{
+        _id:id,
+        title,
+        description
+    });
+
+}

@@ -5,11 +5,12 @@
 
 
 //carga socket dentro del htlm
-import { onHandleSubmit,rendernotes,appendNote } from "./ui.js";
-import { loadnotes,onNewNote } from "./socket.js";
+import { onHandleSubmit,rendernotes,appendNote,fillForm } from "./ui.js";
+import { loadnotes,onNewNote,onSelected } from "./socket.js";
 
 onNewNote(appendNote);
 loadnotes(rendernotes);
+onSelected(fillForm);   
 
 //seleccionar el elemento de html
 const noteform= document.querySelector("#noteform");
