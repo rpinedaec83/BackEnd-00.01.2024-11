@@ -10,8 +10,13 @@ var bodyParser = require("body-parser");
 const app = express();
 const PORT = process.env.PORT || 4000;
 let email="";
-var server = require("http").Server(app);
-var io = require("socket.io")(server);
+
+const http = require('http');
+const {Server} = require('socket.io');
+const server = http.createServer(app);
+const io = new Server(server)
+
+
 // Configurar sesión
 app.use(session({ secret: "secreto", resave: false, saveUninitialized: true }));
 app.use(passport.initialize());
@@ -48,9 +53,7 @@ app.get("/auth/google/callback",
         email = req.user._json.email;
         
         var sql =
-        "REPLACE INTO users (correo , password) VALUES ('" +
-        email +
-        "' , 'oauth')";
+        "REPLACE INTO users (correo , password) VALUES ('" +email +"' , 'oauth')";
     con.query(sql, function (err, result) {
         if (err) throw err;
         //console.log("1 record inserted");
@@ -79,9 +82,47 @@ app.use(express.static(path.join(__dirname, "public")));
 
 function chat_ononline(io){
     io.on('connection',(socket)=>{
+        const cargarpedidos= ()=>{
+            let sql =
+            "SELECT * FROM pedidos";
+            con.query(sql, function (err, result) {
+            if (err) throw err;
+            //console.log("1 record inserted");
+            io.emit('server:mandarpaquetes',result)
+            console.log(result[0].paquete);
+            console.log(result[0]['ubicación'])
+            })
+            
+        }
+        cargarpedidos();
+
+
         socket.on('cliente:manda_mensaje',(data)=>{
-            console.log(data)
+            console.log(data);
+            let sql =
+            "REPLACE INTO mensajes (message , user) VALUES ('" +data +"' , '" +email +"')";
+            con.query(sql, function (err, result) {
+            if (err) throw err;
+            //console.log("1 record inserted");
+            })
+
+
+
         })
+
+        socket.on('cliente:manda_paquete',(data)=>{
+            console.log(data);
+            let value=1;
+            let sql =
+            "REPLACE INTO pedidos (paquete , ubicación , correo, Estado) VALUES ('" +data[0] +"' , '" +data[1] +"','" +email +"','" +value +"')";
+            con.query(sql, function (err, result) {
+            if (err) throw err;
+            //console.log("1 record inserted");
+            })
+            
+        })
+
+        
 
 
     })
@@ -91,7 +132,7 @@ chat_ononline(io)
 
 
 
-app.listen(PORT, () => console.log(`Servidor en http://localhost:${PORT}`));
+server.listen(PORT, () => console.log(`Servidor en http://localhost:${PORT}`));
 
 
 

@@ -79,14 +79,10 @@ label {
 
 /* Sección de Paquetes */
 .package-container {
-    border: 1px solid black;
-    padding: 15px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
+    flex-direction: column; /* Para que los paquetes se apilen verticalmente */
+    align-items: flex-start; /* Alinea los paquetes a la izquierda */
+    gap: 15px; /* Espaciado entre paquetes */
 }
 
 .package-container button {
@@ -94,10 +90,14 @@ label {
     border: 1px solid black;
     background: white;
     cursor: pointer;
+    flex-direction: column;
 }
 .package-item {
     display: flex;
-    justify-content: space-between; /* Para que el botón quede a la derecha */
-    width: 200px;
-    margin-bottom: 1px; /* Espacio entre paquetes */
+    align-items: center; /* Alinea texto y botón al centro */
+    justify-content: space-between; /* Espacia el texto y el botón */
+    width: 100%; /* Ocupará todo el ancho disponible */
+    max-width: 300px; /* Opcional: para evitar que sea demasiado ancho */
+    border: 1px solid black; /* Opcional: solo para visualización */
+    padding: 5px;
 }
