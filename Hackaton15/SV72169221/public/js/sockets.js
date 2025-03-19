@@ -11,11 +11,23 @@ export function Mandar_paquete(arr){
 }
 
 export function recibirPaquetes(){
+    const arr = [];
     socket.on('server:mandarpaquetes',(data)=>{
-        
+        cajaPedidos.innerHTML=''
         data.forEach(element => {
-            console.log(element.paquete)
+            cajaPedidos.innerHTML+=`<div class="package-item"><span>${element.paquete} - ${element["ubicación"]}</span><button class="recibido" id="${element.id}">RECIBIDO</button></div>`;
+            arr.push(`${element.id}`)
         });
+        
+
     })
+    return arr
 };
+
+export function eliminarPaquete(id){
+    socket.emit('cliente:recibiopaquete',id)
+}
+
+
+
 

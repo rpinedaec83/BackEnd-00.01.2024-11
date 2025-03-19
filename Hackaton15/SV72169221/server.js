@@ -119,9 +119,22 @@ function chat_ononline(io){
             if (err) throw err;
             //console.log("1 record inserted");
             })
+            let sql2 =
+            "SELECT * FROM pedidos";
+            con.query(sql2, function (err, result) {
+            if (err) throw err;
+            //console.log("1 record inserted");
+            io.emit('server:mandarpaquetes',result)
+            console.log(result[0].paquete);
+            console.log(result[0]['ubicación'])
+            })
+            
             
         })
 
+        socket.on('cliente:recibiopaquete',id=>{
+            console.log(id);
+        })
         
 
 

@@ -1,8 +1,20 @@
 
 
-import {Mandar_mensaje,Mandar_paquete,recibirPaquetes} from './sockets.js';
+import {Mandar_mensaje,Mandar_paquete,recibirPaquetes,eliminarPaquete} from './sockets.js';
 
-recibirPaquetes();
+const arr = recibirPaquetes();
+console.log(arr);
+
+arr.forEach(element => {
+
+    document.getElementById(element).addEventListener("click",(e)=>{
+        e.preventDefault();
+        console.log(element)
+        eliminarPaquete(element);
+    })
+});
+
+
 document.getElementById("logout-btn").addEventListener("click", () => {
     window.location.href = "/logout";
 });
@@ -22,8 +34,15 @@ document.getElementById("order-boton").addEventListener("click",(e)=>{
     console.log(nombre,ubicacion)
     const arr=[nombre,ubicacion]
     Mandar_paquete(arr);
+    recibirPaquetes();
+    document.getElementById("name").value=``;
+    document.getElementById("location").value=``;
 
 })
+
+
+
+
 
 
 
