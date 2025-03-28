@@ -18,6 +18,16 @@ export function recibirPaquetes(){
             cajaPedidos.innerHTML+=`<div class="package-item"><span>${element.paquete} - ${element["ubicación"]}</span><button class="recibido" id="${element.id}">RECIBIDO</button></div>`;
             arr.push(`${element.id}`)
         });
+        data.forEach(element =>{
+            const button = document.getElementById(element.id);
+            if (button) {
+                button.addEventListener("click",(e)=>{
+                    e.preventDefault();
+                    console.log(`Botón con id ${element.id} clickeado`)
+                    eliminarPaquete(element.id);
+                })
+            }
+        })
         
 
     })

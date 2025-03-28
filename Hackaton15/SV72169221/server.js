@@ -132,9 +132,15 @@ function chat_ononline(io){
             
         })
 
-        socket.on('cliente:recibiopaquete',id=>{
+        socket.on('cliente:recibiopaquete', id => {
             console.log(id);
-        })
+            let sql = "DELETE FROM pedidos WHERE id = " + id;
+            con.query(sql, function (err, result) {
+                if (err) throw err;
+                console.log(`Registro con id ${id} eliminado`);
+            });
+            cargarpedidos();
+        });
         
 
 
